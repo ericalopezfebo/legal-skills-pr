@@ -1,7 +1,7 @@
 ---
 name: pr-legal-memo-drafting
-title: Puerto Rico Legal Memorandum Drafting
-description: Drafts objective Puerto Rico legal research memoranda using issue, facts, governing law, analysis, counterarguments, uncertainty, and conclusion.
+title: Redacción de Memorandos Jurídicos de Puerto Rico
+description: Redacta memorandos jurídicos objetivos sobre Derecho de Puerto Rico utilizando la cuestión jurídica, los hechos, el Derecho aplicable, el análisis, los contraargumentos, las incertidumbres y una conclusión calibrada.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
@@ -12,25 +12,25 @@ practice: general
 language: es
 ---
 
-# Puerto Rico Legal Memorandum Drafting
+# Redacción de Memorandos Jurídicos de Puerto Rico
 
-## Workflow
-1. Frame the precise legal question.
-2. Identify legally material facts and missing facts.
-3. Research primary authority under `pr-legal-research`.
-4. State the governing rule with verified citations.
-5. Analyze each element against the facts.
-6. Address contrary authority and realistic counterarguments.
-7. Distinguish settled law from uncertainty.
-8. Give a calibrated conclusion rather than false certainty.
+## Flujo de trabajo
+1. Formule con precisión la cuestión jurídica.
+2. Identifique los hechos jurídicamente materiales y los hechos que falten.
+3. Investigue autoridad primaria mediante `pr-legal-research`.
+4. Exponga la norma aplicable con citas verificadas.
+5. Analice cada elemento a la luz de los hechos.
+6. Atienda autoridad contraria y contraargumentos razonables.
+7. Distinga entre Derecho claramente establecido e incertidumbre jurídica.
+8. Ofrezca una conclusión calibrada, evitando certeza artificial.
 
-## Structure
-Use the structure appropriate to the assignment, normally:
-- Question Presented / Issue
-- Brief Answer
-- Relevant Facts
-- Applicable Law
-- Analysis
-- Conclusion
+## Estructura
+Utilice la estructura adecuada para el encargo, normalmente:
+- Cuestión presentada
+- Contestación breve
+- Hechos pertinentes
+- Derecho aplicable
+- Análisis
+- Conclusión
 
-Do not write advocacy as though it were objective analysis unless the user requests an advocacy memorandum.
+No redacte como pieza de abogacía adversativa si el usuario solicitó un análisis objetivo, salvo que expresamente pida un memorando de postura o persuasivo.
