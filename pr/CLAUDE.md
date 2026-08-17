@@ -1,43 +1,49 @@
-# Cross-cutting context: the Puerto Rico legal system
+# Contexto transversal: sistema jurídico de Puerto Rico
 
-Orchestrator cold-start for any plugin under `pr/`. Loaded before the plugin-specific `CLAUDE.md` or `SKILL.md`.
+Este archivo funciona como contexto inicial para cualquier skill bajo `pr/`. Debe cargarse antes de las instrucciones específicas de cada `SKILL.md`.
 
-## Legal family
+## Familia jurídica
 
-Hybrid system. Private law (obligations, contracts, property, family, succession) descends from the Spanish civil-law tradition; criminal and constitutional procedure, and the federal overlay, follow U.S. common-law practice. Puerto Rico has been a U.S. territory since 1898; the Constitution of the Commonwealth of Puerto Rico (1952) operates alongside the U.S. Constitution, and U.S. federal law and the First Circuit's jurisprudence bind on matters within federal jurisdiction.
+Puerto Rico tiene un sistema jurídico híbrido. El Derecho privado —obligaciones, contratos, propiedad, familia y sucesiones— se desarrolla principalmente sobre la tradición civilista española. El Derecho constitucional, buena parte del Derecho federal y varias áreas procesales incorporan elementos propios del sistema estadounidense. Puerto Rico es un territorio de Estados Unidos desde 1898; la Constitución del Estado Libre Asociado de Puerto Rico de 1952 coexiste con la Constitución de Estados Unidos, y el Derecho federal y la jurisprudencia del Tribunal de Apelaciones para el Primer Circuito resultan vinculantes cuando corresponda por materia y foro.
 
-## Sources of law (by priority)
+## Fuentes del Derecho, por prioridad
 
-1. U.S. Constitution and applicable federal statutes/treaties (federal-question and diversity matters; federal agencies).
-2. Constitución del Estado Libre Asociado de Puerto Rico (1952).
-3. Statutes enacted by the Asamblea Legislativa, codified in **Leyes de Puerto Rico Anotadas (LPRA)**.
-4. Agency regulations (reglamentos), filed with the Departamento de Estado.
-5. Case law (jurisprudencia) of the **Tribunal Supremo de Puerto Rico** — binding; opinions of the **Tribunal de Apelaciones** are persuasive/intermediate authority. First Circuit and U.S. District Court for the District of Puerto Rico decisions bind on federal-law questions.
+1. Constitución de Estados Unidos y estatutos o tratados federales aplicables, cuando se trate de asuntos de jurisdicción federal, controversias de naturaleza federal o agencias federales.
+2. Constitución del Estado Libre Asociado de Puerto Rico de 1952.
+3. Leyes aprobadas por la Asamblea Legislativa de Puerto Rico y codificadas, cuando corresponda, en **Leyes de Puerto Rico Anotadas (LPRA)**.
+4. Reglamentos administrativos válidamente promulgados y radicados conforme al ordenamiento aplicable.
+5. Jurisprudencia del **Tribunal Supremo de Puerto Rico**, de carácter vinculante en Derecho puertorriqueño. Las determinaciones del **Tribunal de Apelaciones** son autoridad intermedia y, en muchos contextos, persuasiva. Las decisiones del Tribunal de Apelaciones para el Primer Circuito y del Tribunal de Distrito de Estados Unidos para el Distrito de Puerto Rico rigen según corresponda en asuntos de Derecho federal.
 
-## Core codes
+## Cuerpos normativos principales
 
-- **Código Civil de Puerto Rico**, Ley Núm. 55-2020 (31 LPRA) — replaced the 1930 Civil Code; governs obligations, contracts, property, family, and succession.
+- **Código Civil de Puerto Rico**, Ley Núm. 55-2020 (31 LPRA), que sustituyó el Código Civil de 1930 y regula, entre otras materias, obligaciones, contratos, propiedad, familia y sucesiones.
 - **Reglas de Procedimiento Civil de 2009**, según enmendadas (32 LPRA Ap. V).
 - **Reglas de Evidencia de 2009**, según enmendadas (32 LPRA Ap. VI).
 - **Código Penal de Puerto Rico**, Ley Núm. 146-2012 (33 LPRA).
-- **Ley de Procedimiento Administrativo Uniforme (LPAU)**, Ley Núm. 38-2017 (3 LPRA § 9601 et seq.).
-- **Cánones de Ética Profesional**, 4 LPRA Ap. IX (regulate the practice of law; enforced by the Tribunal Supremo through the Oficina de Inspección de Notarías and disciplinary proceedings).
+- **Ley de Procedimiento Administrativo Uniforme del Gobierno de Puerto Rico (LPAU)**, Ley Núm. 38-2017 (3 LPRA § 9601 et seq.).
+- **Reglas de Conducta Profesional de Puerto Rico**, aprobadas por el Tribunal Supremo en 2025 y vigentes desde el 1 de enero de 2026, aplicables al ejercicio de la abogacía y la notaría en Puerto Rico.
+- **Ley Notarial de Puerto Rico**, Ley Núm. 75 de 2 de julio de 1987, según enmendada, y el Reglamento Notarial vigente.
 
-## Language
+## Idioma
 
-Spanish is the working language of the Commonwealth courts and most agencies. The U.S. District Court for the District of Puerto Rico and other federal fora operate in English. Confirm which forum governs before drafting.
+El español es el idioma de trabajo de los tribunales del Estado Libre Asociado y de la mayoría de las agencias públicas de Puerto Rico. El Tribunal de Distrito de Estados Unidos para el Distrito de Puerto Rico y otros foros federales operan en inglés. Antes de redactar, confirme qué foro gobierna el asunto.
 
-## Citation discipline (mandatory for every plugin under `pr/`)
+Salvo que la naturaleza del foro o una fuente oficial requiera otra cosa, los skills bajo `pr/` deben comunicarse y redactar sus productos en español jurídico natural para abogados y abogadas de Puerto Rico.
 
-- Statutes: cite both the popular name/session-law number and the current LPRA codification where known — e.g., "Art. 1064, Código Civil de PR, Ley Núm. 55-2020, 31 LPRA § [sección]". LPRA sections get renumbered on recodification; **do not assume an old Civil Code (31 LPRA, pre-2020) citation still applies** — confirm which code version governs the facts.
-- Tribunal Supremo opinions: "*[Parte] v. [Parte]*, [volumen] DPR [página] ([año])".
-- Tribunal de Apelaciones: cite by KLAN/KLRA/KLCE docket number and decision date; these are frequently unpublished/persuasive only — say so.
-- **Never invent** a section number, case name, docket number, or page citation. If you cannot verify it from context or a cited source, say so explicitly and prompt the user to confirm against LexJuris, Microjuris, or the official Rama Judicial site before filing or relying on it.
+## Disciplina de citación — obligatoria para todo skill bajo `pr/`
 
-## Working with current law
+- **Estatutos:** cuando sea posible, cite tanto el nombre popular o número de ley como la codificación vigente en LPRA. Ejemplo: `Art. 1064, Código Civil de Puerto Rico, Ley Núm. 55-2020, 31 LPRA § [sección]`.
+- Las secciones de LPRA pueden cambiar como consecuencia de recodificaciones. **No asuma que una cita del Código Civil anterior a 2020 continúa vigente.** Confirme qué versión del código gobierna los hechos.
+- **Tribunal Supremo:** utilice, cuando esté disponible y verificado, el formato `Parte v. Parte, [volumen] DPR [página] ([año])`.
+- **Tribunal de Apelaciones:** cite por número de expediente —por ejemplo, KLAN, KLRA o KLCE— y fecha de resolución o sentencia, explicando su carácter cuando corresponda.
+- **Nunca invente** un número de sección, nombre de caso, número de expediente, página, término o autoridad. Si no puede verificarse con el contexto o con una fuente confiable, debe decirse expresamente y requerirse confirmación antes de presentar o depender del documento.
 
-Puerto Rico statutes and rules are amended frequently, and several major codes were recently replaced (Civil Code in 2020; LPAU in 2017). A skill that depends on a specific article or rule must state the assumed version/date and warn the user to confirm it is still current.
+## Trabajo con Derecho vigente
 
-## Mandatory disclaimer in output
+Las leyes, reglamentos y reglas procesales de Puerto Rico se enmiendan con frecuencia. Todo skill que dependa de una disposición específica debe identificar la versión asumida o la fecha pertinente y advertir cuando sea necesaria una verificación adicional de vigencia.
 
-> Este contenido es informativo únicamente y no constituye asesoramiento legal. Verifique la ley, regla o reglamento vigente, y las reglas particulares del tribunal o agencia correspondiente, antes de utilizarlo. Un abogado admitido a la práctica en Puerto Rico debe revisar cualquier documento antes de presentarlo o enviarlo.
+Cuando el usuario solicite investigación o verificación actual, debe darse prioridad a fuentes oficiales de Puerto Rico y, cuando proceda, a bases jurídicas confiables como LexJuris o Microjuris para localizar y cotejar autoridades.
+
+## Descargo de responsabilidad obligatorio
+
+> Este contenido es informativo únicamente y no constituye asesoramiento legal. Verifique la ley, regla o reglamento vigente y las reglas particulares del tribunal, agencia u organismo correspondiente antes de utilizarlo. Un abogado o abogada admitido(a) a la práctica en Puerto Rico debe revisar cualquier documento antes de presentarlo, autorizarlo o enviarlo.
