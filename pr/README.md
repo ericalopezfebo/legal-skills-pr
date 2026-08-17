@@ -1,82 +1,82 @@
 # Puerto Rico (`pr/`)
 
-Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the jurisdiction's legal family, sources of law, and mandatory citation/disclaimer conventions — every skill below is written to follow it.
+Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CLAUDE.md`](CLAUDE.md) para el contexto transversal de la jurisdicción, la jerarquía de fuentes, las reglas de citación y el descargo de responsabilidad obligatorio que deben seguir todos los skills de esta carpeta.
 
 ## General
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-legal-citation`](general/skills/pr-legal-citation/) | Checks and formats citations to PR statutes, case law, and regulations |
-| [`pr-legal-research`](general/skills/pr-legal-research/) | Structures research on a PR legal question into a sourced memo |
-| [`pr-legal-memo-drafting`](general/skills/pr-legal-memo-drafting/) | Drafts a formal, objective legal research memorandum |
-| [`pr-citation-verifier`](general/skills/pr-citation-verifier/) | Verifies that a cited authority exists, is current, and actually supports the proposition |
-| [`pr-filing-readiness`](general/skills/pr-filing-readiness/) | Final pre-filing quality-control audit of a document |
-| [`pr-prescription-analysis`](general/skills/pr-prescription-analysis/) | Analyzes limitations/caducity periods through a claim-specific chronology |
+| [`pr-legal-citation`](general/skills/pr-legal-citation/) | Verifica y da formato a citas de estatutos, jurisprudencia y reglamentos de Puerto Rico |
+| [`pr-legal-research`](general/skills/pr-legal-research/) | Estructura una investigación jurídica sobre una cuestión de Derecho puertorriqueño y produce un memorando fundamentado |
+| [`pr-legal-memo-drafting`](general/skills/pr-legal-memo-drafting/) | Redacta un memorando jurídico formal y objetivo |
+| [`pr-citation-verifier`](general/skills/pr-citation-verifier/) | Verifica que una autoridad citada exista, esté vigente y realmente apoye la proposición para la cual se cita |
+| [`pr-filing-readiness`](general/skills/pr-filing-readiness/) | Realiza una auditoría final de control de calidad antes de presentar un documento |
+| [`pr-prescription-analysis`](general/skills/pr-prescription-analysis/) | Analiza términos prescriptivos o de caducidad mediante una cronología específica de la reclamación |
 
-## Litigation
+## Litigación
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-summary-judgment-motion`](litigation/skills/pr-summary-judgment-motion/) | Builds/opposes a moción de sentencia sumaria (Regla 36) |
-| [`pr-motion-drafting`](litigation/skills/pr-motion-drafting/) | General-purpose motion/opposition/reply drafting engine |
-| [`pr-complaint-drafting`](litigation/skills/pr-complaint-drafting/) | Drafts a civil complaint from verified facts and causes of action |
-| [`pr-answer-drafting`](litigation/skills/pr-answer-drafting/) | Drafts a paragraph-by-paragraph answer and supported affirmative defenses |
-| [`pr-motion-assume-representation`](litigation/skills/pr-motion-assume-representation/) | Drafts a motion entering or assuming legal representation, including co-representation/substitution scenarios |
-| [`pr-motion-withdraw-representation`](litigation/skills/pr-motion-withdraw-representation/) | Drafts a motion to withdraw as counsel while protecting the client and pending deadlines |
-| [`pr-motion-extension-time`](litigation/skills/pr-motion-extension-time/) | Drafts a motion for extension of time from verified deadlines and supported good cause |
-| [`pr-motion-dismiss`](litigation/skills/pr-motion-dismiss/) | Analyzes and drafts a Puerto Rico Regla 10.2 motion to dismiss |
-| [`pr-motion-compel-discovery`](litigation/skills/pr-motion-compel-discovery/) | Drafts a request-by-request motion to compel discovery |
-| [`pr-reconsideration-motion`](litigation/skills/pr-reconsideration-motion/) | Drafts a civil reconsideration motion with deadline and appellate-effect screening |
-| [`pr-default-relief`](litigation/skills/pr-default-relief/) | Handles entry of default, default judgment, and relief from default under Puerto Rico procedure |
-| [`pr-civil-deadlines`](litigation/skills/pr-civil-deadlines/) | Calculates and audits civil litigation deadlines from verified rules, triggers, and orders |
-| [`pr-discovery-drafting`](litigation/skills/pr-discovery-drafting/) | Drafts interrogatories, production requests, and admissions |
-| [`pr-discovery-response`](litigation/skills/pr-discovery-response/) | Drafts discovery responses and good-faith objections |
-| [`pr-doctrine-to-facts`](litigation/skills/pr-doctrine-to-facts/) | Connects citations already in a draft to the case's specific facts |
+| [`pr-summary-judgment-motion`](litigation/skills/pr-summary-judgment-motion/) | Redacta u opone una moción de sentencia sumaria bajo la Regla 36 |
+| [`pr-motion-drafting`](litigation/skills/pr-motion-drafting/) | Motor general para redactar mociones, oposiciones y réplicas |
+| [`pr-complaint-drafting`](litigation/skills/pr-complaint-drafting/) | Redacta una demanda civil a partir de hechos y causas de acción verificadas |
+| [`pr-answer-drafting`](litigation/skills/pr-answer-drafting/) | Redacta una contestación alegación por alegación y defensas afirmativas fundamentadas |
+| [`pr-motion-assume-representation`](litigation/skills/pr-motion-assume-representation/) | Redacta una moción asumiendo representación legal, incluso en escenarios de co-representación o sustitución |
+| [`pr-motion-withdraw-representation`](litigation/skills/pr-motion-withdraw-representation/) | Redacta una moción de renuncia a representación protegiendo al cliente y los términos pendientes |
+| [`pr-motion-extension-time`](litigation/skills/pr-motion-extension-time/) | Redacta una moción de prórroga a partir de términos verificados y justa causa sostenida por los hechos |
+| [`pr-motion-dismiss`](litigation/skills/pr-motion-dismiss/) | Analiza y redacta una moción de desestimación bajo la Regla 10.2 de Procedimiento Civil |
+| [`pr-motion-compel-discovery`](litigation/skills/pr-motion-compel-discovery/) | Redacta una moción para compeler descubrimiento de prueba, solicitud por solicitud |
+| [`pr-reconsideration-motion`](litigation/skills/pr-reconsideration-motion/) | Redacta una moción de reconsideración civil con análisis de término y efecto apelativo |
+| [`pr-default-relief`](litigation/skills/pr-default-relief/) | Maneja anotación de rebeldía, sentencia en rebeldía y relevo de rebeldía bajo el procedimiento de Puerto Rico |
+| [`pr-civil-deadlines`](litigation/skills/pr-civil-deadlines/) | Calcula y audita términos procesales civiles a partir de reglas, eventos activadores y órdenes verificadas |
+| [`pr-discovery-drafting`](litigation/skills/pr-discovery-drafting/) | Redacta interrogatorios, requerimientos de producción y requerimientos de admisiones |
+| [`pr-discovery-response`](litigation/skills/pr-discovery-response/) | Redacta contestaciones a descubrimiento y objeciones de buena fe |
+| [`pr-doctrine-to-facts`](litigation/skills/pr-doctrine-to-facts/) | Conecta las autoridades ya citadas en un borrador con los hechos específicos del caso |
 
-## Appellate
+## Apelaciones
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-appellate-drafting`](appellate/skills/pr-appellate-drafting/) | Drafts an appellate brief/petition after jurisdiction and deadline screening |
+| [`pr-appellate-drafting`](appellate/skills/pr-appellate-drafting/) | Redacta recursos o escritos apelativos después de examinar jurisdicción y términos |
 
-## Administrative
+## Administrativo
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-agency-appeal-lpau`](administrative/skills/pr-agency-appeal-lpau/) | Structures an LPAU agency appeal, incl. CASARH/CASP personnel appeals |
+| [`pr-agency-appeal-lpau`](administrative/skills/pr-agency-appeal-lpau/) | Estructura recursos administrativos bajo la LPAU, incluidos asuntos de personal ante organismos como CASP/CASARH según corresponda |
 
-## Contracts
+## Contratos
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-contract-review`](contracts/skills/pr-contract-review/) | Reviews an existing contract against the 2020 Código Civil |
-| [`pr-contract-drafting`](contracts/skills/pr-contract-drafting/) | Drafts, revises, or adapts a contract or clause |
+| [`pr-contract-review`](contracts/skills/pr-contract-review/) | Revisa contratos existentes conforme al Código Civil de Puerto Rico de 2020 |
+| [`pr-contract-drafting`](contracts/skills/pr-contract-drafting/) | Redacta, revisa o adapta contratos y cláusulas |
 
 ## Notarial
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-notarial-instrument-drafting`](notarial/skills/pr-notarial-instrument-drafting/) | Drafts and audits Puerto Rico escrituras públicas and actas notariales and, when file generation is available, produces protocol-style editable DOCX output following [`notarial/FORMAT_SPEC.md`](notarial/FORMAT_SPEC.md) |
+| [`pr-notarial-instrument-drafting`](notarial/skills/pr-notarial-instrument-drafting/) | Redacta y audita escrituras públicas y actas notariales de Puerto Rico a partir de hechos verificados, Derecho vigente y formato notarial puertorriqueño |
 
-## Professional responsibility
+## Responsabilidad profesional
 
-| Skill | What it does |
+| Skill | Qué hace |
 |---|---|
-| [`pr-ethics-conflict-check`](professional-responsibility/skills/pr-ethics-conflict-check/) | Screens conflicts, confidentiality, and communications under the 2025 Puerto Rico Rules of Professional Conduct |
-| [`pr-engagement-letter`](professional-responsibility/skills/pr-engagement-letter/) | Drafts a client engagement letter / hoja de encargo |
+| [`pr-ethics-conflict-check`](professional-responsibility/skills/pr-ethics-conflict-check/) | Analiza conflictos, confidencialidad y comunicaciones bajo las Reglas de Conducta Profesional de Puerto Rico vigentes desde 2026 |
+| [`pr-engagement-letter`](professional-responsibility/skills/pr-engagement-letter/) | Redacta una carta de contratación o hoja de encargo profesional |
 
 ---
 
-**Composable workflows:**
+## Flujos de trabajo combinables
 
-- Complaint: `pr-legal-research` → `pr-prescription-analysis` → `pr-complaint-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
-- Answer: `pr-civil-deadlines` → `pr-answer-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
-- Motion: specialized procedural skill (e.g. `pr-motion-dismiss`, `pr-summary-judgment-motion`) → `pr-motion-drafting` → `pr-doctrine-to-facts` → `pr-citation-verifier` → `pr-filing-readiness`
-- Discovery dispute: `pr-discovery-response` → `pr-motion-compel-discovery` → `pr-filing-readiness`
-- Reconsideration: `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
-- Appeal: `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
-- Contract: `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` (when legal authorities are stated)
-- Notarial instrument: transaction facts/model → `pr-legal-research` (when current-law verification is needed) → `pr-notarial-instrument-drafting` → protocol-format DOCX → notarial review
-- New matter: `pr-ethics-conflict-check` → `pr-engagement-letter`
+- **Demanda:** `pr-legal-research` → `pr-prescription-analysis` → `pr-complaint-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Contestación:** `pr-civil-deadlines` → `pr-answer-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Moción:** skill procesal especializado, por ejemplo `pr-motion-dismiss` o `pr-summary-judgment-motion` → `pr-motion-drafting` → `pr-doctrine-to-facts` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Controversia de descubrimiento:** `pr-discovery-response` → `pr-motion-compel-discovery` → `pr-filing-readiness`
+- **Reconsideración:** `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Apelación:** `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Contrato:** `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` cuando se incluyan autoridades jurídicas
+- **Instrumento notarial:** `pr-legal-research` cuando sea necesaria verificación de Derecho vigente → `pr-notarial-instrument-drafting` → `pr-citation-verifier`
+- **Nuevo asunto:** `pr-ethics-conflict-check` → `pr-engagement-letter`
 
-Want to add a practice area or skill? See the root [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+Para añadir una nueva área de práctica o un skill, consulte [`CONTRIBUTING.md`](../CONTRIBUTING.md).
