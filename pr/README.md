@@ -56,7 +56,7 @@ Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the 
 
 | Skill | What it does |
 |---|---|
-| [`pr-notarial-instrument-drafting`](notarial/skills/pr-notarial-instrument-drafting/) | Drafts and audits Puerto Rico escrituras públicas and actas notariales from verified facts and current notarial/substantive law |
+| [`pr-notarial-instrument-drafting`](notarial/skills/pr-notarial-instrument-drafting/) | Drafts and audits Puerto Rico escrituras públicas and actas notariales and, when file generation is available, produces protocol-style editable DOCX output following [`notarial/FORMAT_SPEC.md`](notarial/FORMAT_SPEC.md) |
 
 ## Professional responsibility
 
@@ -76,7 +76,7 @@ Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the 
 - Reconsideration: `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
 - Appeal: `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
 - Contract: `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` (when legal authorities are stated)
-- Notarial instrument: `pr-legal-research` (when current-law verification is needed) → `pr-notarial-instrument-drafting` → `pr-citation-verifier`
+- Notarial instrument: transaction facts/model → `pr-legal-research` (when current-law verification is needed) → `pr-notarial-instrument-drafting` → protocol-format DOCX → notarial review
 - New matter: `pr-ethics-conflict-check` → `pr-engagement-letter`
 
 Want to add a practice area or skill? See the root [`CONTRIBUTING.md`](../CONTRIBUTING.md).
