@@ -1,11 +1,11 @@
 ---
 name: pr-notarial-instrument-drafting
 title: Redacción de Instrumentos Notariales de Puerto Rico
-description: Redacta instrumentos públicos de Puerto Rico, incluyendo escrituras públicas y actas notariales, a partir de hechos verificados y del derecho notarial, civil, registral, contributivo y de conducta profesional vigente en Puerto Rico. Utilizar cuando el usuario solicite redactar, preparar, revisar, adaptar, corregir o estructurar una escritura, acta, poder, donación, compraventa, opción, repudiación de herencia, hogar seguro u otro instrumento público para autorización por un notario o notaria de Puerto Rico.
+description: Redacta instrumentos públicos de Puerto Rico —escrituras públicas y actas notariales— con contenido jurídico verificado y con formato protocolar puertorriqueño fiel a los modelos de referencia del proyecto. Utilizar cuando el usuario solicite redactar, preparar, revisar, adaptar, corregir o estructurar una escritura, acta, poder, donación, compraventa, opción, repudiación de herencia, hogar seguro u otro instrumento público para autorización por un notario o notaria de Puerto Rico.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
-version: 0.2.0
+version: 0.3.0
 execution_mode: open
 jurisdiction: pr
 practice: notarial
@@ -14,290 +14,407 @@ language: es
 
 # Redacción de Instrumentos Notariales de Puerto Rico
 
-## Propósito
-Redactar un instrumento notarial de Puerto Rico estructuralmente completo, fundamentado en los hechos, adaptado a la transacción y listo para la revisión del notario o notaria autorizante. Este skill no sustituye los deberes personales e indelegables del notario: identificación de los otorgantes, apreciación de la capacidad, asesoramiento legal, imparcialidad, autorización, custodia del protocolo, cumplimiento registral y contributivo, y el ejercicio de su juicio profesional.
+## Misión
+
+La misión principal de este skill es **producir instrumentos públicos con apariencia, arquitectura y lenguaje notarial puertorriqueño**, no memorandos, bosquejos ni contratos genéricos.
+
+Cuando el usuario pide “redacta”, “prepara”, “haz la escritura”, “haz el acta” o equivalente, el resultado debe parecerse a un instrumento protocolar listo para pasar a revisión notarial y, cuando el entorno permita crear archivos, debe entregarse preferentemente como **DOCX editable**.
+
+El formato visual obligatorio se define en [`pr/notarial/FORMAT_SPEC.md`](../../FORMAT_SPEC.md). **Ese archivo forma parte de este skill y debe aplicarse en todo instrumento final.**
+
+Este skill no sustituye los deberes personales e indelegables del notario o notaria autorizante: identificación de comparecientes, juicio de capacidad, consentimiento, asesoramiento, imparcialidad, unidad de acto cuando corresponda, autorización, signo, firma, rúbrica, sello, custodia del protocolo, expedición de copias, presentación registral y cumplimiento contributivo.
+
+## Regla fundamental: contenido correcto + formato fiel
+
+El instrumento final debe satisfacer simultáneamente dos exigencias:
+
+1. **Corrección jurídica:** el contenido debe responder a los hechos y al derecho vigente.
+2. **Fidelidad formal:** la presentación debe seguir la estructura visual de los modelos notariales puertorriqueños del proyecto.
+
+No sacrificar una por la otra. Si un modelo contiene un error, se conserva su **formato**, no el error.
 
 ## Jerarquía de fuentes rectoras
-Antes de afirmar que una cláusula, advertencia, formalidad, gestión contributiva, requisito registral o consecuencia legal es obligatoria, verifique la autoridad vigente. Aplique, según corresponda:
+
+Antes de afirmar que una cláusula, advertencia, formalidad, gestión contributiva, requisito registral o consecuencia legal es obligatoria, verificar la autoridad vigente. Aplicar, según corresponda:
 
 1. **Ley Notarial de Puerto Rico**, Ley Núm. 75 de 2 de julio de 1987, según enmendada (4 L.P.R.A. § 2001 et seq.).
-2. **Reglamento Notarial de Puerto Rico** y las reglas/órdenes vigentes del Tribunal Supremo y de la Oficina de Inspección de Notarías (ODIN). *Nota: este skill fue actualizado con el texto de la Ley 75-1987; el Reglamento Notarial no ha sido cotejado contra su texto vigente más reciente. Toda referencia a disposiciones reglamentarias debe verificarse independientemente antes de afirmarse como requisito.*
-3. **Código Civil de Puerto Rico de 2020** y las leyes especiales aplicables.
-4. **Ley del Registro de la Propiedad Inmobiliaria del Estado Libre Asociado de Puerto Rico** y las reglas registrales vigentes, cuando se trate de bienes inmuebles.
-5. Estatutos contributivos de Puerto Rico, determinaciones administrativas de Hacienda, requisitos del Centro de Recaudación de Ingresos Municipales (CRIM) y derecho municipal o federal aplicable, cuando la transacción lo requiera.
-6. **Reglas de Conducta Profesional de Puerto Rico**, en particular las disposiciones sobre la función notarial, confidencialidad, competencia, conflictos de interés, imparcialidad, competencia tecnológica y renuncia o negativa a actuar.
+2. **Reglamento Notarial de Puerto Rico**, así como reglas y órdenes vigentes del Tribunal Supremo de Puerto Rico y de la Oficina de Inspección de Notarías (ODIN).
+3. **Código Civil de Puerto Rico de 2020** y leyes especiales aplicables.
+4. **Ley del Registro de la Propiedad Inmobiliaria de Puerto Rico** y normativa registral vigente cuando se trate de bienes inmuebles.
+5. Estatutos contributivos de Puerto Rico, determinaciones de Hacienda, requisitos del CRIM y derecho municipal o federal aplicable.
+6. **Reglas de Conducta Profesional de Puerto Rico** vigentes.
 7. Jurisprudencia vinculante del Tribunal Supremo de Puerto Rico.
 
-Nunca asuma que una minuta o instrumento modelo anterior es prueba de que una cita legal, advertencia, norma contributiva, práctica registral o requisito estatutario sigue vigente.
+No asumir que una cita o advertencia de un instrumento viejo sigue vigente solamente porque aparece en un modelo.
 
-## Disciplina en el uso de fuentes
-- Utilice los instrumentos previos suministrados por el usuario como **referencia de estilo e identificación de asuntos**, nunca como derecho controlante.
-- Conserve las convenciones notariales puertorriqueñas útiles que aparezcan en los modelos del usuario — p. ej., número y título del instrumento, lugar y fecha, `ANTE MÍ`, `COMPARECE(N)`, `DOY FE`, `EXPONE(N)`, cláusulas propias de la transacción, `ADVERTENCIAS`, `ACEPTACIÓN`, `OTORGAMIENTO Y LECTURA`, lenguaje de autorización y certificación de copias — únicamente cuando resulten apropiadas al instrumento específico.
-- Corrija, en lugar de reproducir ciegamente, las inconsistencias evidentes, numeración duplicada, citas obsoletas, cláusulas contradictorias, errores de género o de designación de las partes, discrepancias registrales o lenguaje repetitivo sin base legal.
-- Si un modelo suministrado contradice el derecho vigente, prevalece el derecho vigente y la discrepancia debe señalarse expresamente.
+## Regla de prioridad para modelos y plantillas
+
+Cuando existan referencias visuales, utilizar este orden:
+
+1. plantilla editable expresamente suministrada por el usuario para el instrumento específico;
+2. instrumento modelo del mismo tipo suministrado por el usuario;
+3. `pr/notarial/FORMAT_SPEC.md`;
+4. convenciones notariales puertorriqueñas generales.
+
+Si el usuario entrega un PDF de ejemplo, estudiar tanto su texto como su distribución visual antes de redactar.
 
 ## Primera decisión: escritura o acta
-Determine el vehículo notarial correcto antes de redactar.
 
 ### Escritura pública
-Utilice una escritura cuando el instrumento contenga un negocio jurídico, declaración de voluntad, contrato, transmisión, aceptación, renuncia, poder, constitución, modificación o extinción de un derecho, u otra transacción que por ley o por la intención de las partes deba formalizarse en instrumento público dispositivo (Ley 75-1987, Art. 13, 4 L.P.R.A. § 2031).
+
+Utilizar escritura cuando se formalice un negocio jurídico, declaración de voluntad, transmisión, aceptación, renuncia, poder, constitución, modificación o extinción de derechos u otro acto dispositivo que corresponda documentar mediante escritura pública.
 
 ### Acta notarial
-Utilice un acta cuando el notario esencialmente consigne hechos, circunstancias, manifestaciones, notificaciones, presencia, notoriedad, protocolización u otros asuntos de los que da fe sin que el documento constituya, en sí, un negocio jurídico bilateral o dispositivo (Ley 75-1987, Art. 30-31, 4 L.P.R.A. §§ 2048-2049), sujeto siempre al derecho que gobierne el acto específico.
 
-Si la clasificación es incierta, no adivine. Explique el problema e identifique la autoridad legal que debe verificarse antes de la autorización.
+Utilizar acta cuando el notario consigne hechos, circunstancias, manifestaciones, requerimientos, presencia, notoriedad, protocolización u otras materias propias de la fe notarial que no se estructuren como negocio jurídico dispositivo.
 
-## Lista de cotejo previa a la redacción (intake)
-Obtenga o señale como pendiente lo siguiente, en la medida en que resulte pertinente:
+Si la clasificación no es clara, detenerse y señalar qué autoridad o dato debe verificarse antes de autorizar.
+
+## Lista de cotejo previa a la redacción
+
+Obtener o marcar como pendiente, según corresponda:
 
 ### A. Instrumento y notario
-- tipo y propósito del instrumento y su calificación con el nombre que en derecho tenga (Art. 15(b));
-- número de orden que corresponda en el protocolo, en letras (Art. 15(a));
-- nombre del notario, su vecindad y el sitio donde radica su notaría, así como día, mes, año y lugar del otorgamiento (Art. 15(c));
-- si se requieren testigos instrumentales, intérpretes, representantes, oficiales corporativos, fiduciarios, tutores, apoderados u otros comparecientes especiales, y si el otorgamiento requiere unidad de acto (Art. 20-24).
 
-### B. Partes / requirentes
+- tipo y propósito del instrumento;
+- número de orden en el protocolo;
+- lugar y fecha exacta del otorgamiento;
+- nombre del notario o notaria y los datos que legalmente deban consignarse;
+- necesidad de testigos, intérpretes, representantes, oficiales corporativos, fiduciarios, tutores, apoderados u otros comparecientes especiales;
+- si existe un instrumento modelo o plantilla que deba reproducirse.
+
+### B. Comparecientes
+
 Para cada persona o entidad:
-- nombre legal exacto y nombres alternos si son legalmente pertinentes;
+
+- nombre legal exacto;
 - mayoría de edad;
-- estado civil y, de ser casado(a), si es necesaria la comparecencia del cónyuge; si no lo es, el nombre y apellido del cónyuge debe expresarse igualmente (Art. 15(d));
-- profesión u ocupación, cuando se requiera o sea costumbre consignarla;
-- vecindad y jurisdicción;
+- estado civil y régimen económico matrimonial cuando sea material;
+- ocupación o profesión cuando corresponda;
+- vecindad;
 - capacidad en que comparece;
-- designación de parte que se mantenga consistente a través de todo el instrumento;
-- método de identificación efectivamente utilizado por el notario — conocimiento personal o alguno de los medios supletorios del Art. 17 (véase la sección de Identificación, más abajo);
-- autoridad representativa y fuente documental, de aplicar (Art. 18-19);
-- hechos de capacidad/competencia que el notario debe apreciar personalmente.
+- designación de parte que se mantendrá de forma uniforme;
+- método de identificación realmente utilizado;
+- autoridad representativa y documento que la acredita, cuando aplique;
+- hechos de capacidad y voluntariedad que el notario debe apreciar personalmente.
 
-Nunca invente un número de licencia de conducir, número de seguro social, número de identificación patronal, número de colegiado (RUA), credencial registral, dato de poder, resolución corporativa, orden judicial o dato de identidad.
+Nunca inventar número de licencia, seguro social, EIN, RUA, poder, resolución corporativa, orden judicial, identificación o dato personal para “completar” el instrumento.
 
-### C. Hechos de la transacción
-- origen del título o derecho, o base fáctica;
-- contraprestación, valor, precio, valor de la donación, o base sin contraprestación, según aplique;
-- condiciones, plazos, reservas, limitaciones, sustitución, revocación, terminación, posesión, entrega, distribución de gastos y fecha de efectividad;
-- aceptaciones o consentimientos requeridos;
-- elementos de derecho sustantivo propios del negocio jurídico específico.
+### C. Negocio jurídico
 
-### D. Bien inmueble, cuando aplique
-Exija o señale como pendiente:
-- descripción registral exacta;
-- número de finca y sección/demarcación registral;
-- datos de inscripción o título de adquisición;
-- **número de catastro** asignado por el CRIM; si es desconocido o aún no ha sido asignado, así debe hacerse constar en la escritura (Art. 15(i));
-- porcentajes o cuotas de titularidad; si la transmisión es de una porción abstracta e indefinida en pro indiviso, debe incluirse la advertencia sobre los efectos de la comunidad de bienes y la prohibición de segregar, lotificar o identificar dicha porción sin el permiso correspondiente de la Junta de Planificación, ARPE/Permisos o la agencia correspondiente (Art. 15(g));
-- cargas, gravámenes, hipotecas, servidumbres, anotaciones, condiciones y demás afecciones vigentes;
-- información y fecha/fuente del estudio de título o certificación;
-- estatus ante el CRIM y asuntos contributivos; en toda transmisión de dominio, el notario debe incorporar la advertencia sobre la necesidad y conveniencia de obtener una certificación de deuda contributiva del CRIM (Art. 15(h));
-- si el bien es de nueva construcción o goza de exención total o parcial bajo la "Ley de Estímulo al Mercado de Propiedades Inmuebles" u otra ley de incentivos vigente al momento del otorgamiento, la aplicabilidad de dicha exención debe hacerse constar al final de la escritura, basada en las representaciones de los otorgantes (Art. 11);
-- si se trata de residencia principal, el notario debe asesorar y advertir al adquirente sobre los beneficios de exoneración contributiva bajo la "Ley de Contribución Municipal sobre la Propiedad de 1991" (Art. 11);
-- issues de zona inundable, condominio/propiedad horizontal, restricciones de uso, herencia, comunidad de bienes o hogar seguro, cuando sean pertinentes;
-- quién presentará el instrumento para inscripción y cualquier gestión posterior al otorgamiento, incluyendo la Planilla Informativa sobre Segregación, Agrupación o Traslado de Bienes Inmuebles que debe depositarse en la oficina del notario y remitirse mensualmente a Hacienda (Art. 11).
+- acto jurídico exacto que se formaliza;
+- título u origen del derecho;
+- precio, valor, contraprestación o liberalidad;
+- condiciones y términos;
+- reservas y limitaciones;
+- fecha de efectividad;
+- consentimientos y aceptaciones necesarios;
+- obligaciones posteriores al otorgamiento.
 
-No concilie silenciosamente una discrepancia entre la descripción registral, el número de catastro, el estudio de título, la escritura de adquisición, el porcentaje de titularidad o los datos de gravámenes. Deténgase y señálelo.
+### D. Bien inmueble
 
-## Algoritmo de redacción
+Cuando se trate de inmueble, requerir o señalar como pendiente:
 
-1. **Identificar el negocio jurídico.** Establezca con precisión qué se constituye, transmite, acepta, renuncia, autoriza, declara o consigna.
-2. **Verificar el derecho vigente.** Identifique las formalidades propias de la transacción, reglas de capacidad, consentimientos indispensables, prohibiciones, advertencias, gestiones contributivas, consecuencias registrales y deberes posteriores a la autorización.
-3. **Validar a las partes.** Verifique nombres, capacidades, régimen matrimonial, autoridad representativa y consistencia interna.
-4. **Construir un mapa de la transacción.** Para cada elemento legal, identifique el hecho o documento que lo sostiene. Si un elemento carece de sustento, márquelo como `[FALTA INFORMACIÓN]` en lugar de inventarlo.
-5. **Escoger escritura o acta** y estructurar el documento en consecuencia.
-6. **Redactar las formalidades de apertura.** Número y título del instrumento, lugar y fecha, `ANTE MÍ`, identificación del notario, `COMPARECE(N)`, identificación y circunstancias personales, lenguaje de capacidad y voluntariedad conforme a los hechos.
-7. **Redactar la parte expositiva.** Consigne título, antecedentes, titularidad, datos registrales, hechos sucesorios, autoridad corporativa, parentesco, instrumentos previos u otros hechos necesarios para comprender la transacción.
-8. **Redactar la parte dispositiva o de solicitud.** Exprese el negocio jurídico en lenguaje operativo claro. Separe los pactos y condiciones materiales en cláusulas numeradas.
-9. **Redactar las advertencias propias de la transacción.** Incluya únicamente las advertencias sostenidas por el derecho vigente y los hechos del caso — incluidas, cuando apliquen, las advertencias obligatorias del Art. 15 (comunidad de bienes, deuda contributiva CRIM, exención contributiva). No incluya advertencias genéricas ajenas a la transacción.
-10. **Consignar las consecuencias registrales y contributivas.** Exprese únicamente los requisitos verificados sobre presentación, inscripción, CRIM, Hacienda, sellos de Rentas Internas, sello de Impuesto Notarial y sello de la Sociedad para Asistencia Legal (Art. 10), contribución sobre donaciones o herencias, permisos, certificaciones u otras obligaciones de radicación.
-11. **Redactar la aceptación/consentimiento.** Incluya la aceptación explícita cuando el negocio jurídico la requiera.
-12. **Redactar el otorgamiento y la autorización.** Incluya el lenguaje de lectura, ratificación, iniciales/firmas al margen de cada folio (Art. 16, 28), hechos sobre testigos/intérpretes y la fórmula de fe notarial que corresponda al instrumento y a las circunstancias reales.
-13. **Certificación de copia / bloque posterior a la autorización.** Incluya un espacio reservado o un borrador solo si se solicita y únicamente en forma consistente con los requisitos notariales vigentes (Art. 39-46) y los hechos reales de expedición.
-14. **Realizar una auditoría notarial.** Revise numeración, fechas, nombres, designaciones de las partes, porcentajes, descripciones de propiedad, cifras, citas, anejos, referencias cruzadas, líneas de firma, advertencias y gestiones posteriores a la autorización.
+- descripción registral exacta y completa;
+- finca, folio, tomo, inscripción y sección/demarcación registral, según corresponda;
+- título de adquisición;
+- número de catastro;
+- porcentajes o cuotas de titularidad;
+- cargas y gravámenes;
+- hipotecas, servidumbres, anotaciones y condiciones;
+- estudio de título o certificación y su fecha;
+- estatus CRIM y cuestiones contributivas;
+- hogar seguro, zona inundable, condominio, restricciones, sucesiones, comunidad de bienes u otras leyes especiales pertinentes;
+- quién presentará el instrumento al Registro y qué gestiones posteriores corresponden.
 
-## Módulos por tipo de transacción
-Aplique el módulo correspondiente, además del algoritmo general.
+No conciliar silenciosamente discrepancias entre descripción registral, catastro, estudio de título, escritura de adquisición, porcentajes o cargas.
+
+## Algoritmo de trabajo
+
+1. **Identificar el acto jurídico.** Precisar qué se transmite, constituye, acepta, renuncia, declara, autoriza o hace constar.
+2. **Seleccionar el vehículo notarial.** Escritura o acta.
+3. **Verificar derecho vigente.** Formalidades, capacidad, consentimiento, advertencias, requisitos registrales, contributivos y posteriores al otorgamiento.
+4. **Validar comparecientes.** Nombres, estado civil, representación, autoridad y designaciones.
+5. **Construir mapa de hechos.** Cada elemento jurídico debe tener un hecho o documento que lo sostenga.
+6. **Seleccionar el modelo visual más cercano.** Identificar la plantilla o instrumento de referencia aplicable.
+7. **Redactar en estilo protocolar desde el comienzo.** No redactar primero como memo para “convertirlo” después.
+8. **Añadir advertencias específicas.** Solo las pertinentes al acto y al derecho vigente.
+9. **Auditar datos registrales y cifras.** No alterar una descripción registral por razones estilísticas.
+10. **Redactar cierre notarial completo.** Lectura, ratificación, firmas, iniciales, testigos, autorización y fe según los hechos reales.
+11. **Preparar nota de saca y certificación, cuando proceda.** Separadas del cuerpo según `FORMAT_SPEC.md`.
+12. **Generar DOCX cuando sea posible.** Aplicar el formato de página y composición obligatoria.
+13. **Comparar visualmente contra el modelo.** Corregir cualquier apariencia de memo, contrato privado o documento genérico.
+14. **Ejecutar auditoría final de contenido y formato.**
+
+## Formato de salida obligatorio
+
+### Regla de entrega
+
+Cuando el usuario solicite el instrumento final y el entorno permita generar archivos:
+
+- crear **DOCX editable**;
+- usar **papel legal 8.5 x 14** salvo que la plantilla disponga otra cosa;
+- reproducir la zona marginal izquierda/tomo y el cuerpo/folio;
+- incluir los encabezados, guiones y cierres conforme a `FORMAT_SPEC.md`;
+- si el usuario pide PDF, generar además una copia PDF sin sustituir el DOCX editable.
+
+No entregar solamente una explicación seguida de un bloque de texto si es posible generar el documento.
+
+### Estructura visual base
+
+La apertura debe seguir la arquitectura:
+
+```text
+-----------------------ESCRITURA NÚMERO [___] ([___])-----------------------
+-----------------------------[TÍTULO DEL ACTO]------------------------------
+---En la ciudad de [MUNICIPIO], Puerto Rico, a [FECHA].---------------------
+-------------------------------------ANTE MÍ---------------------------------
+---[NOTARIO/A].-------------------------------------------------------------
+----------------------------------COMPARECE(N)-------------------------------
+---[COMPARECIENTES].--------------------------------------------------------
+--------------------------------------DOY FE---------------------------------
+---[IDENTIFICACIÓN, CAPACIDAD Y VOLUNTARIEDAD].----------------------------
+-------------------------------------EXPONE(N)-------------------------------
+---PRIMERO: ...-------------------------------------------------------------
+---SEGUNDO: ...-------------------------------------------------------------
+```
+
+Los encabezados no deben convertirse en títulos Markdown ni estilos gráficos modernos.
+
+### Guiones
+
+- Utilizar guiones antes y después de los encabezados como en los modelos.
+- Iniciar párrafos materiales con `---` cuando corresponda.
+- Completar con guiones el remanente de la última línea del párrafo cuando reproduzca el modelo.
+- No sustituir automáticamente los guiones por em dash, reglas horizontales, bullets o listas de Word.
+
+### Partes
+
+Usar denominaciones consistentes y en mayúsculas cuando el modelo lo haga: `DONANTE`, `DONATARIO`, `VENDEDORA`, `COMPRADORA`, `PODERDANTE`, `APODERADO`, `REQUIRENTE`, etc.
+
+### Descripción registral
+
+Reproducirla **íntegramente**, sin resumir, parafrasear, modernizar o “corregir” colindancias. Si existe un posible error registral, marcarlo para verificación sin alterar silenciosamente el texto fuente.
+
+### Nota de saca
+
+La nota de saca no es una cláusula del negocio. Debe aparecer en la **zona marginal izquierda/tomo** en el formato del modelo, cuando corresponda.
+
+En borradores, si aún no se ha expedido copia, usar un marcador como:
+
+`[NOTA DE SACA — COMPLETAR AL EXPEDIR COPIA CERTIFICADA]`
+
+Nunca afirmar que se expidió una copia si todavía no ocurrió.
+
+### Certificación de copia
+
+La certificación debe prepararse como bloque separado de la matriz y seguir la arquitectura definida en `FORMAT_SPEC.md`. No inventar número de folios, sellos cancelados, fecha de expedición ni persona con interés.
+
+### Folio y tomo
+
+No confundir el folio protocolar con el número de página de Word/PDF. Reservar el área correspondiente y usar `[FOLIO ___]` cuando el dato real aún no esté disponible.
+
+## Módulos por tipo de instrumento
 
 ### Donación
-Verifique como mínimo:
-- titularidad del donante y facultad de disponer;
-- identidad del donatario y requisitos de aceptación;
-- si la donación es inter vivos o está especialmente caracterizada;
-- valor y descripción del bien donado;
-- reservas, condiciones, prohibiciones de enajenar, reversión/revocación, usufructo u otros derechos retenidos;
-- issues de legítima y los límites sustantivos del derecho sucesorio vigente;
-- radicación contributiva y cualquier requisito de Hacienda vigente a la fecha de autorización;
-- consecuencias registrales y ante el CRIM, si se trata de bien inmueble, incluyendo la advertencia y número de catastro del Art. 15(h)-(i).
 
-No reutilice una cláusula de advertencia de donaciones sin verificar que los términos contributivos, exclusiones, artículos del Código Civil y estatutos del CRIM citados sigan vigentes.
+Verificar como mínimo:
+
+- titularidad y capacidad dispositiva del donante;
+- identidad y aceptación del donatario;
+- bien y valor;
+- reservas, usufructo, condiciones, prohibiciones, reversión o revocación;
+- legítima y límites sucesorios pertinentes;
+- obligaciones contributivas vigentes;
+- efectos registrales y CRIM.
+
+No copiar automáticamente advertencias contributivas de una donación antigua.
 
 ### Compraventa / opción / promesa
-Verifique como mínimo:
-- bien o derecho exacto que se vende u opciona;
-- porcentaje de titularidad; si es una porción pro indiviso, incluya la advertencia de comunidad de bienes del Art. 15(g);
-- precio o mecanismo de determinación objetiva del precio;
-- contraprestación de la opción, de haberla, y su efecto legal;
-- plazo y método de ejercicio;
+
+Verificar:
+
+- propiedad o participación exacta;
+- porcentaje de titularidad;
+- precio o mecanismo objetivo para determinarlo;
+- contraprestación de opción, si existe;
+- término y forma de ejercicio;
 - contingencias de financiamiento;
-- distribución de contribuciones, utilidades, costos de cierre, posesión y riesgo;
-- gravámenes que subsistirán o se cancelarán;
-- elegibilidad registral y cualquier condición inscribible;
-- advertencia sobre certificación de deuda contributiva del CRIM (Art. 15(h)) y número de catastro (Art. 15(i));
-- si aplica alguna exención bajo legislación de estímulo a la vivienda vigente al momento del otorgamiento (Art. 11);
-- consistencia entre todos los plazos y cláusulas.
+- contribuciones, utilidades, cierre, posesión y riesgo;
+- cargas que se cancelarán o permanecerán;
+- inscribibilidad del acuerdo;
+- coherencia entre todos los términos y fechas.
+
+Si dos cláusulas establecen plazos incompatibles, no escoger una silenciosamente: señalar y resolver la contradicción antes de producir la versión final.
 
 ### Poder / poder duradero
-Verifique como mínimo:
-- base estatutaria vigente y efecto de la duración (Código Civil de Puerto Rico de 2020 y la Ley de Registro de Poderes, Ley Núm. 62 de 8 de mayo de 1937, según referida en el Art. 76 de la Ley 75-1987);
-- identidad del poderdante(s), apoderado(s), apoderado(s) sucesor(es), y términos de activación/efectividad;
-- autoridad precisa conferida, en lugar de depender únicamente de lenguaje genérico;
-- autoridad especial para transacciones que requieren autorización expresa;
-- autocontratación, donaciones, fideicomisos, cambios de beneficiario, litigios, gestiones bancarias, bienes inmuebles, acceso a información de salud, activos digitales, asuntos contributivos y delegación/sustitución, según aplique;
-- limitaciones que protejan la residencia principal u otros bienes protegidos;
-- consecuencias de terminación, revocación e incapacidad;
-- cumplimiento con el registro de poderes correspondiente conforme al Art. 76 de la Ley 75-1987.
+
+Verificar:
+
+- base legal y efecto del poder;
+- poderdantes, apoderados y sustitutos;
+- facultades específicas;
+- facultades que exijan autorización expresa;
+- bienes inmuebles, cuentas, litigios, Hacienda, CRIM, información médica, activos digitales y demás materias pertinentes;
+- autocontratación, donaciones o conflictos de interés cuando sean relevantes;
+- límites sobre residencia principal u otros bienes protegidos;
+- revocación, sustitución, incapacidad y terminación.
 
 ### Repudiación de herencia
-Verifique como mínimo:
-- identidad del causante y fecha/lugar del fallecimiento;
-- base por la cual el compareciente es llamado a heredar;
-- si la sucesión es testada o intestada, y los hechos relevantes sobre declaratoria o testamento;
-- formalidades vigentes del Código Civil para la repudiación;
-- restricciones de capacidad y de representación;
-- indivisibilidad, condiciones, momento y efecto, consecuencias frente a acreedores, e irrevocabilidad, únicamente en la medida en que el derecho vigente realmente las disponga;
-- si alguna conducta previa podría constituir aceptación o afectar de otro modo la facultad de repudiar;
-- si el causante otorgó testamento, verifique el certificado negativo o positivo del Registro de Testamentos adscrito a la Oficina de Inspección de Notarías (Art. 71-75), pues el Tribunal no dará curso a una declaratoria de herederos sin dicho certificado.
+
+Verificar:
+
+- causante y fecha/lugar de fallecimiento;
+- título por el cual la persona es llamada a heredar;
+- sucesión testada o intestada;
+- formalidades vigentes de repudiación;
+- capacidad;
+- efectos, indivisibilidad y consecuencias frente a acreedores;
+- posible aceptación previa expresa o tácita.
 
 ### Hogar seguro
-Verifique como mínimo:
-- elegibilidad estatutaria;
-- titularidad y hechos sobre residencia principal;
-- ausencia de una designación de hogar seguro en conflicto;
-- descripción exacta del bien y datos registrales, incluyendo número de catastro;
-- excepciones y efectos vigentes;
-- requisitos de anotación/presentación registral;
-- consecuencias para el cónyuge, la familia y la sucesión bajo el derecho vigente.
 
-## Salvaguardas notariales especiales
+Verificar:
+
+- elegibilidad;
+- titularidad;
+- residencia principal;
+- inexistencia de designación incompatible;
+- descripción registral y catastro;
+- excepciones y efectos vigentes;
+- anotación registral;
+- consecuencias familiares y sucesorias aplicables.
+
+## Identificación, capacidad y fe notarial
 
 ### Identificación
-Redacte únicamente lo que el notario efectivamente conoce o ha verificado. Distinga el conocimiento personal de la identificación por medios documentales o testificales legalmente permitidos. Los medios supletorios de identificación reconocidos por el Art. 17 de la Ley 75-1987 son:
 
-(a) la afirmación de una persona que conozca al otorgante y sea conocida por el notario, siendo esa persona responsable de la identificación y el notario responsable del conocimiento del testigo;
+Redactar únicamente lo que el notario realmente conoce o verificará conforme al derecho aplicable. Distinguir conocimiento personal de medios supletorios de identificación.
 
-(b) la identificación de una de las partes contratantes por la otra, siempre que el notario dé fe de conocimiento de esta última;
+### Capacidad
 
-(c) documento de identidad con retrato y firma expedido por autoridad pública competente de Puerto Rico, de los Estados Unidos o de un estado de la Unión, o pasaporte expedido por autoridad extranjera.
+El skill puede redactar la fórmula notarial, pero no sustituye el juicio personal del notario. Si existe duda sobre capacidad, coerción, influencia indebida, comprensión del idioma o voluntariedad, detenerse y señalarlo.
 
-Nunca consigne `DOY FE` de un hecho que el notario no ha establecido personalmente conforme a estos medios.
+### `DOY FE`
 
-### Capacidad y voluntariedad
-El texto puede reflejar la apreciación del notario, pero este skill no puede realizar dicha apreciación. Si la capacidad, coacción, influencia indebida, comprensión del idioma, necesidad de acomodo razonable, intoxicación, deterioro cognitivo o voluntariedad están en cuestión, señálelo para el notario y no lo encubra con lenguaje repetitivo.
+No afirmar como hecho notarial algo que el modelo no puede presenciar o verificar. En borradores, la fórmula puede quedar preparada para la autorización, pero debe corresponder a hechos que el notario confirmará personalmente.
 
-### Asesoramiento notarial imparcial
-Cuando el notario actúa en su función notarial, redacte advertencias y explicaciones de forma neutral. El notario puertorriqueño no representa a ninguno de los otorgantes; representa la fe pública y la ley para todas las partes (Exposición de Motivos y Art. 2, Ley 75-1987). No convierta el instrumento en defensa de una parte compareciente frente a otra cuando se requiere imparcialidad.
+## Representación
 
-### Confidencialidad y datos sensitivos
-No incluya en el borrador información confidencial o de identificación personal salvo que sea legalmente necesaria. Utilice espacios reservados para identificadores sensitivos cuando un borrador de trabajo redactado sea suficiente. Recuerde que el protocolo notarial es secreto y solo puede examinarse conforme a la ley o mediante mandato judicial (Art. 47).
+Cuando una persona comparezca en representación de otra:
 
-### Título de bien inmueble
-Nunca infiera que el título está libre de gravámenes por el mero silencio. Si el estatus registral vigente no ha sido verificado, consigne `[VERIFICAR ESTADO REGISTRAL Y CARGAS]`.
+- identificar representante y representado;
+- describir la fuente de autoridad;
+- verificar suficiencia de facultades;
+- consignar datos del poder, resolución, nombramiento u otra fuente únicamente si están verificados;
+- no inventar RUA, número de escritura, fecha, notario o registro de poder.
 
-### Formalidades documentales del instrumento
-Conforme al Art. 27 de la Ley 75-1987: no pueden usarse guarismos en fechas y cantidades a menos que también se consignen en letras (excepto en citas directas); no pueden usarse abreviaturas ni dejarse espacios en blanco en el texto. Conforme al Art. 32, las adiciones, apostillas, entrerrenglonaduras, raspaduras y tachaduras se tienen por no puestas a menos que se salven al final del último renglón con la aprobación expresa y firma de quienes suscriben el documento.
+## Testigos e intérpretes
 
-### Testigos instrumentales
-No es necesaria la intervención de testigos instrumentales salvo que la reclame el notario autorizante, cualquiera de las partes, o cuando algún otorgante no sepa o no pueda leer o firmar (Art. 20). Cuando comparezcan testigos instrumentales, es indispensable la unidad de acto, que el notario debe hacer constar bajo su fe (Art. 24). Los testigos deben ser mayores de edad, capacitados, y saber y poder leer y firmar; no pueden ser testigos instrumentales los empleados del notario ni los parientes del notario o de las partes interesadas dentro del cuarto grado de consanguinidad o segundo de afinidad (Art. 22). Cuando el otorgante no sepa o no pueda firmar, se exigirán sus huellas digitales conforme al Art. 25.
+No incluir renuncia o intervención de testigos de forma mecánica. Determinar primero si la ley y las circunstancias requieren testigos o intérprete y redactar conforme a lo realmente ocurrido.
 
-### Nulidad y anulabilidad
-Conforme al Art. 34, son **nulos** los instrumentos públicos que: (1) contengan alguna disposición a favor del notario que los autorice; (2) tengan como testigos a parientes de las partes interesadas dentro del grado prohibido por el Art. 22; o (3) no lleven las firmas de las partes, testigos (cuando corresponda) o del notario. Conforme al Art. 35, son **anulables** los instrumentos en que el notario no dé fe del conocimiento de los otorgantes ni supla esa diligencia conforme al Art. 17. Verifique siempre estos elementos antes de dar por completo un instrumento.
+## Advertencias
 
-### Citas legales
-No invente citas de estatutos, artículos o de L.P.R.A. Cuando se incluya una advertencia legal, cite la fuente vigente verificada, si está disponible (p. ej., "Ley 75-1987, Art. [__], 4 L.P.R.A. § [__]"). Si la verificación no está disponible, use `[VERIFICAR BASE LEGAL VIGENTE]` en lugar de una cita antigua tomada de un modelo.
+Las advertencias deben ser **específicas al acto**, no un depósito de boilerplate.
+
+Antes de insertar una advertencia tomada de un modelo viejo, verificar:
+
+- si la ley citada sigue vigente;
+- si el artículo sigue siendo el mismo;
+- si el término contributivo cambió;
+- si la agencia o procedimiento sigue existiendo bajo ese nombre;
+- si la advertencia aplica a los hechos del nuevo instrumento.
+
+## Registro, CRIM y Hacienda
+
+Cuando el instrumento afecte bienes inmuebles:
+
+- verificar cargas y titularidad;
+- verificar catastro;
+- identificar obligaciones ante CRIM;
+- identificar documentos o planillas informativas pertinentes;
+- verificar advertencias y deberes registrales;
+- identificar quién presentará el instrumento;
+- no asumir que un estudio de título cierra el Registro ni que ausencia de información significa ausencia de cargas.
+
+## Sellos, copias y protocolo
+
+No afirmar que existen, fueron adheridos, cancelados o expedidos sellos, copias o certificaciones que no consten realmente.
+
+Cuando el usuario pida una copia certificada, nota de saca o certificación, utilizar `FORMAT_SPEC.md` y los datos reales de expedición.
 
 ## Modos de salida
 
-### Modo A — Borrador terminado
-Cuando el usuario solicite redactar o preparar el instrumento, produzca el instrumento completo en el estilo notarial de Puerto Rico, usando espacios reservados únicamente donde falten hechos o derecho verificado.
+### Modo A — Instrumento final
 
-Esqueleto recomendado:
+Activar cuando el usuario pide redactar o preparar el instrumento. Entregar el instrumento, no un memo. Cuando sea posible, crear DOCX.
 
-```text
-ESCRITURA/ACTA NÚMERO [___]
-[TÍTULO DEL INSTRUMENTO]
+### Modo B — Intake
 
-En [municipio], Puerto Rico, a [fecha].
+Si faltan datos esenciales que impiden una redacción jurídicamente responsable, entregar una lista breve y específica de los datos indispensables que faltan.
 
-ANTE MÍ
+No convertir cualquier dato menor en una excusa para no redactar. Puede prepararse un borrador con `[FALTA INFORMACIÓN]` o `[VERIFICAR]` cuando ello permita avanzar sin inventar.
 
-[identificación del/de la notario(a)]
+### Modo C — Revisión
 
-COMPARECE(N)
+Al revisar una escritura o acta existente, separar:
 
-[comparecientes y circunstancias]
+1. impedimentos para autorización;
+2. problemas sustantivos;
+3. formalidades notariales;
+4. problemas registrales/contributivos;
+5. inconsistencias internas;
+6. errores de formato frente al modelo;
+7. lenguaje de reemplazo recomendado.
 
-DOY FE
+### Modo D — Conversión a formato protocolar
 
-[identificación, capacidad, representación y voluntariedad según proceda]
+Si el usuario suministra un borrador jurídicamente completo y pide “ponlo en formato de escritura/acta”, no reescribir innecesariamente el negocio. Convertirlo al formato visual definido por el modelo y `FORMAT_SPEC.md`, preservando el contenido salvo correcciones necesarias.
 
-EXPONE(N) / REQUIERE(N)
+## Auditoría final obligatoria
 
-PRIMERO: ...
-SEGUNDO: ...
+Antes de entregar un instrumento final verificar:
 
-[CLÁUSULAS DISPOSITIVAS / TÉRMINOS Y CONDICIONES]
+### Contenido
 
-[ADVERTENCIAS]
+- [ ] acto jurídico correctamente identificado;
+- [ ] escritura vs. acta correctamente seleccionado;
+- [ ] nombres y roles consistentes;
+- [ ] representación verificada;
+- [ ] datos registrales consistentes;
+- [ ] porcentajes correctos;
+- [ ] cifras y fechas coherentes;
+- [ ] condiciones y términos no se contradicen;
+- [ ] advertencias actuales y pertinentes;
+- [ ] requisitos CRIM/Hacienda/Registro identificados;
+- [ ] ninguna cita legal inventada;
+- [ ] ningún hecho inventado.
 
-[ACEPTACIÓN / RATIFICACIÓN, si procede]
+### Formato
 
-OTORGAMIENTO, LECTURA Y AUTORIZACIÓN
+- [ ] aplicado `FORMAT_SPEC.md`;
+- [ ] papel legal o plantilla correcta;
+- [ ] zona tomo/margen separada del folio cuando corresponda;
+- [ ] encabezados centrados con guiones;
+- [ ] `ANTE MÍ`, `COMPARECE(N)`, `DOY FE`, `EXPONE(N)` en estilo de modelo;
+- [ ] párrafos con estilo notarial de guiones;
+- [ ] descripción registral íntegra;
+- [ ] sin bullets ni apariencia de memo;
+- [ ] nota de saca en margen/tomo, no dentro del negocio;
+- [ ] folio reservado correctamente;
+- [ ] cierre completo de lectura/autorización;
+- [ ] firmas y espacios apropiados;
+- [ ] certificación separada cuando aplique;
+- [ ] DOCX visualmente comparable al instrumento modelo.
 
-[texto aplicable]
+## Guardrails estrictos
 
-[FIRMAS]
+- Nunca inventar hechos para completar la apariencia del instrumento.
+- Nunca fabricar cita legal, dato registral, resultado de estudio de título, certificación, estatus contributivo, identificación, firma, testigo, sello, nota de saca o expedición de copia.
+- Nunca resumir una descripción registral para ahorrar espacio.
+- Nunca entregar un “instrumento final” con estética de memorando si el entorno permite aplicar el formato protocolar.
+- Nunca copiar un error de un modelo únicamente para lograr fidelidad visual.
+- Nunca afirmar que el modelo autorizó, presenció o dio fe de hechos reales.
+- El notario o notaria autorizante debe revisar independientemente el instrumento y ejercer los deberes notariales indelegables.
 
-[CERTIFICACIÓN DE COPIA, si procede y si fue solicitada]
-```
-
-### Modo B — Intake previo a la redacción
-Si faltan hechos esenciales, devuelva una lista de cotejo compacta agrupada por: partes, autoridad/capacidad, transacción, propiedad/registro, contribuciones, advertencias y otorgamiento. No solicite detalles inmateriales solo porque aparecieron en un modelo anterior.
-
-### Modo C — Revisión / auditoría de borrador (redline)
-Al revisar un borrador existente, informe:
-- **impedimentos fatales para la autorización**;
-- **problemas de derecho sustantivo**;
-- **problemas de formalidad notarial**;
-- **problemas registrales/contributivos/posteriores a la autorización**;
-- **inconsistencias internas/errores tipográficos**;
-- **lenguaje de sustitución recomendado**.
-
-## Lista de control de calidad
-Antes de finalizar, verifique:
-- [ ] Clasificación correcta como escritura o acta.
-- [ ] Número de instrumento, título, lugar y fecha son consistentes.
-- [ ] El nombre y rol exactos de cada parte son consistentes en todo el instrumento.
-- [ ] El método de identificación y el lenguaje de capacidad corresponden a los hechos reales.
-- [ ] La autoridad representativa está identificada y verificada, cuando aplique.
-- [ ] Todos los elementos operativos del negocio jurídico están presentes.
-- [ ] Todas las aceptaciones/consentimientos requeridos son explícitos.
-- [ ] La descripción de la propiedad y los datos registrales son internamente consistentes.
-- [ ] Los porcentajes de titularidad suman correctamente.
-- [ ] El precio/valor/contraprestación y los términos de pago son coherentes.
-- [ ] Las condiciones y plazos no se contradicen entre sí.
-- [ ] Los gravámenes/cargas se consignan a partir de información verificada.
-- [ ] Las advertencias propias de la transacción están vigentes y ajustadas a los hechos, incluyendo las obligatorias del Art. 15 (comunidad de bienes, deuda contributiva CRIM, exención contributiva) cuando apliquen.
-- [ ] Los requisitos contributivos/CRIM/registrales están verificados a la fecha de autorización.
-- [ ] Las citas están vigentes y no fueron copiadas ciegamente de formularios anteriores.
-- [ ] La numeración de párrafos y las referencias cruzadas son correctas.
-- [ ] La lectura, ratificación, firmas, iniciales al margen, testigos/intérpretes y el lenguaje de autorización corresponden al método real de otorgamiento.
-- [ ] No aparece ninguna afirmación de `DOY FE` sin sustento.
-- [ ] Se identifican las gestiones posteriores a la autorización, presentación y expedición de copias, incluyendo los sellos e índices mensuales requeridos por el Art. 10 y el Art. 12.
-- [ ] No se incluyen guarismos sin su expresión en letras, abreviaturas ni espacios en blanco en el texto (Art. 27).
-
-## Salvaguardas inquebrantables
-- Nunca invente hechos para que un instrumento parezca completo.
-- Nunca fabrique una cita legal, asiento registral, resultado de estudio de título, certificación, estatus contributivo, método de identificación, firma, testigo, notarización, sello o expedición de copia.
-- Nunca afirme que un instrumento está listo para autorizarse cuando un hecho requerido, consentimiento, determinación de capacidad, formalidad legal, dato registral o requisito de derecho vigente permanece sin resolver.
-- Nunca copie lenguaje repetitivo antiguo solo porque aparece en un modelo suministrado.
-- Nunca suplante al notario ni afirme que el propio modelo identificó personalmente a alguien, presenció una firma, tomó un juramento o autorizó el instrumento.
-- El notario o notaria autorizante de Puerto Rico debe revisar independientemente el instrumento final y ejercer todos los deberes notariales indelegables.
-
-Cierre con el descargo de responsabilidad obligatorio de `pr/CLAUDE.md`.
+Cerrar con el descargo de responsabilidad obligatorio de `pr/CLAUDE.md` cuando corresponda.
