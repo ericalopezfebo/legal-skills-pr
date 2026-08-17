@@ -1,7 +1,7 @@
 ---
 name: pr-civil-deadlines
 title: Puerto Rico Civil Litigation Deadlines
-.description: Calculates and audits Puerto Rico civil litigation deadlines from verified triggering events, current rules, statutes, court orders, and applicable computation-of-time provisions, while flagging jurisdictional or non-extendable terms.
+description: Calculates and audits Puerto Rico civil litigation deadlines from verified triggering events, current rules, statutes, court orders, and applicable computation-of-time provisions, while flagging jurisdictional or non-extendable terms.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
