@@ -1,22 +1,22 @@
-# Contributing
+# Cómo contribuir
 
-Thanks for adding a skill. Skills are short Markdown files — no code required.
+Gracias por aportar un skill. Los skills son archivos Markdown breves; no se requiere escribir código.
 
-## How to contribute
+## Cómo hacer una contribución
 
-1. Fork the repository.
-2. Add a folder `pr/{practice}/skills/{slug}/` with a `SKILL.md` inside (use the template below). If the practice area doesn't exist yet under `pr/`, just create it.
-3. Open a pull request.
+1. Haga un fork del repositorio.
+2. Añada una carpeta `pr/{area-de-practica}/skills/{slug}/` con un archivo `SKILL.md` dentro. Puede utilizar la plantilla incluida más abajo. Si el área de práctica todavía no existe bajo `pr/`, créela.
+3. Abra un pull request.
 
-## `SKILL.md` template
+## Plantilla de `SKILL.md`
 
 ```markdown
 ---
-name: my-skill
-title: My Skill
-description: One-paragraph description of what the skill does and when to use it — this is what an AI agent uses to decide when to invoke it, so be specific about trigger phrases and scope.
-author: Your Name
-author_url: https://github.com/yourhandle
+name: mi-skill
+title: Mi Skill
+description: Descripción en un párrafo de lo que hace el skill y cuándo debe utilizarse. Esta descripción ayuda al agente de IA a decidir cuándo invocarlo, por lo que debe ser específica sobre frases disparadoras y alcance.
+author: Su Nombre
+author_url: https://github.com/suusuario
 license: MIT
 version: 0.1.0
 execution_mode: open
@@ -25,26 +25,27 @@ practice: litigation
 language: es
 ---
 
-# Skill title
+# Título del skill
 
-## When to apply
-Triggers, example user prompts, what's explicitly out of scope.
+## Cuándo aplicar
+Disparadores, ejemplos de solicitudes y asuntos expresamente fuera de alcance.
 
-## Algorithm
-Step-by-step instructions for the agent to follow.
+## Algoritmo
+Instrucciones paso a paso que debe seguir el agente.
 
-## Output contract
-What the answer must contain — format, required citations, the mandatory disclaimer.
+## Contrato de salida
+Qué debe contener la respuesta: formato, citas requeridas y el descargo de responsabilidad obligatorio.
 ```
 
-## Ground rules
+## Reglas generales
 
-- **Never invent a citation.** Every skill must instruct the agent to flag missing/unverified statute sections, case names, docket numbers, or deadlines rather than fabricate them — see [`pr/CLAUDE.md`](pr/CLAUDE.md).
-- **State the code/rule version you're relying on.** Puerto Rico has recodified major areas recently (Código Civil in 2020, LPAU in 2017) — a skill that assumes the wrong version is worse than no skill at all.
-- **License.** Contributions must be MIT-compatible; by opening a PR you license your contribution under this repository's [LICENSE](LICENSE).
-- **This is not legal advice, and neither is anything these skills produce.** Every skill's output must end with the disclaimer in `pr/CLAUDE.md`.
-- **No confidential or matter-specific content.** Skills should be general-purpose — don't contribute content tied to a real, identifiable client, judge, or pending matter.
+- **Nunca invente una cita.** Todo skill debe instruir al agente a señalar estatutos, casos, números de expediente, reglas o términos que no hayan sido verificados, en lugar de fabricarlos. Véase [`pr/CLAUDE.md`](pr/CLAUDE.md).
+- **Indique la versión del código o regla utilizada.** Puerto Rico ha sustituido y recodificado áreas importantes en años recientes, como el Código Civil de 2020 y la LPAU de 2017. Un skill que aplica una versión incorrecta puede ser peor que no utilizar ninguno.
+- **Idioma.** El contenido sustantivo y las instrucciones dirigidas a abogados de Puerto Rico deben redactarse en español, salvo que la naturaleza del foro, una fuente oficial o un término técnico requiera mantener texto en inglés.
+- **Licencia.** Las contribuciones deben ser compatibles con la licencia MIT. Al abrir un pull request, usted licencia su contribución bajo la [LICENSE](LICENSE) de este repositorio.
+- **Esto no constituye asesoramiento legal.** Todo producto de los skills debe incluir el descargo requerido por `pr/CLAUDE.md`.
+- **No incluya contenido confidencial o específico de un asunto real.** Los skills deben ser de uso general. No aporte nombres reales de clientes, jueces ni información identificable de litigios pendientes.
 
-## No exclusivity
+## No exclusividad
 
-You keep all rights to your skill and can publish it elsewhere without notifying anyone.
+Usted conserva sus derechos sobre su skill y puede publicarlo o reutilizarlo en otros lugares sin necesidad de notificar al repositorio.
