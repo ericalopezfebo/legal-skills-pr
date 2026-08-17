@@ -1,7 +1,7 @@
 ---
 name: pr-prescription-analysis
-title: Puerto Rico Prescription and Caducity Analysis
-description: Analyzes Puerto Rico limitation periods, accrual, interruption, tolling-related issues, caducity, and claim-specific timing without assuming all causes of action share the same term.
+title: Análisis de Prescripción y Caducidad en Puerto Rico
+description: Analiza términos de prescripción y caducidad en Puerto Rico, incluyendo nacimiento de la causa de acción, interrupción, reconocimiento, reclamación extrajudicial y otros eventos temporalmente relevantes, sin asumir que todas las causas de acción comparten el mismo término.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
@@ -12,22 +12,22 @@ practice: general
 language: es
 ---
 
-# Puerto Rico Prescription and Caducity Analysis
+# Análisis de Prescripción y Caducidad en Puerto Rico
 
-## High-risk rule
-Never answer a Puerto Rico prescription question from a generic limitations table alone.
+## Regla de alto riesgo
+Nunca conteste una cuestión de prescripción en Puerto Rico utilizando únicamente una tabla genérica de términos.
 
-## Workflow
-1. Identify the exact cause(s) of action.
-2. Identify the law version applicable to the events.
-3. Determine whether the period is prescription, caducity, jurisdictional, or another timing rule.
-4. Verify the applicable term from current primary authority.
-5. Determine accrual/starting event.
-6. Build a dated chronology.
-7. Identify alleged interruption, acknowledgment, extrajudicial claim, filing, notice, or other legally relevant event.
-8. Analyze whether the event satisfies the applicable requirements.
-9. Account for claim/defendant-specific effects.
-10. State the earliest plausible expiration date and unresolved assumptions.
+## Flujo de trabajo
+1. Identifique con precisión la causa o causas de acción.
+2. Identifique la versión del Derecho aplicable a los hechos.
+3. Determine si el término es de prescripción, caducidad, jurisdiccional o de otra naturaleza.
+4. Verifique el término aplicable mediante autoridad primaria vigente.
+5. Determine el evento que inicia el cómputo.
+6. Construya una cronología con fechas.
+7. Identifique cualquier alegación de interrupción, reconocimiento, reclamación extrajudicial, presentación judicial, notificación u otro evento jurídicamente pertinente.
+8. Analice si cada evento satisface los requisitos aplicables.
+9. Considere los efectos específicos para cada reclamación y cada demandado.
+10. Indique la fecha de expiración más temprana razonablemente posible y toda premisa no resuelta.
 
-## Output
-Show the chronology and legal assumptions. If a date or legal classification is missing, do not manufacture a definitive expiration date.
+## Producto final
+Muestre la cronología y las premisas jurídicas utilizadas. Si falta una fecha o una clasificación jurídica necesaria, no fabrique una fecha definitiva de expiración.
