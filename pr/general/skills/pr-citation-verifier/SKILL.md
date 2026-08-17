@@ -1,7 +1,7 @@
 ---
 name: pr-citation-verifier
-title: Puerto Rico Legal Citation Verifier
-description: Verifies Puerto Rico legal authorities and citation propositions before a filing or legal document relies on them; detects fabricated, mismatched, obsolete, or unsupported authorities.
+title: Verificador de Citas Jurídicas de Puerto Rico
+description: Verifica autoridades jurídicas de Puerto Rico y las proposiciones para las cuales se citan antes de que una presentación judicial o documento legal dependa de ellas; detecta autoridades fabricadas, incorrectas, obsoletas o que no sostienen la proposición citada.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
@@ -12,27 +12,27 @@ practice: general
 language: es
 ---
 
-# Puerto Rico Legal Citation Verifier
+# Verificador de Citas Jurídicas de Puerto Rico
 
-## Purpose
-Treat every citation as a claim requiring verification.
+## Propósito
+Trate toda cita como una afirmación que requiere verificación.
 
-## Verification matrix
-For each authority determine:
-1. Does the source exist?
-2. Is the citation/identifier accurate?
-3. Is it the correct jurisdiction and court?
-4. Is the authority current?
-5. Does the cited page/section actually support the proposition?
-6. Is quoted language exact?
-7. Is the authority binding, persuasive, superseded, amended, reversed, or otherwise limited?
-8. Does a newer primary source materially change the proposition?
+## Matriz de verificación
+Para cada autoridad, determine:
+1. ¿Existe la fuente?
+2. ¿Es correcta la cita o el identificador?
+3. ¿Corresponde a la jurisdicción y al tribunal correctos?
+4. ¿La autoridad continúa vigente?
+5. ¿La página, sección o disposición citada realmente sostiene la proposición?
+6. ¿El lenguaje entrecomillado es exacto?
+7. ¿La autoridad es vinculante, persuasiva, sustituida, enmendada, revocada o está limitada de algún otro modo?
+8. ¿Existe una fuente primaria más reciente que modifique materialmente la proposición?
 
-## Output statuses
-- `VERIFIED`
-- `VERIFIED WITH QUALIFICATION`
-- `NOT VERIFIED`
-- `CONTRADICTED`
-- `OBSOLETE/SUPERSEDED`
+## Estados de salida
+- `VERIFICADO`
+- `VERIFICADO CON SALVEDAD`
+- `NO VERIFICADO`
+- `CONTRADICHO`
+- `OBSOLETO O SUSTITUIDO`
 
-Never “repair” an apparently fabricated case by silently substituting a different authority. Explain the discrepancy and provide a verified alternative only when one is actually located.
+Nunca «repare» silenciosamente un caso aparentemente fabricado sustituyéndolo por otra autoridad. Explique la discrepancia y ofrezca una alternativa verificada únicamente cuando realmente la haya localizado.
