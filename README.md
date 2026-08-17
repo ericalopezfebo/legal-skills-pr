@@ -1,158 +1,125 @@
 # Legal Skills — Puerto Rico
 
-> **Open-source library of legal AI skills for practice under Puerto Rico law**, in
-> the Anthropic Skills (`SKILL.md`) format — runnable by Claude Code, Claude
-> Cowork, and any other MCP/skills-compatible client. Citation checking,
-> legal research memos, Regla 36 summary judgment motions, LPAU/CASARH
-> agency appeals, Código Civil (2020) contract review, and Cánones de Ética
-> conflict screening. MIT, contribution-friendly.
+> **Biblioteca de código abierto de skills jurídicos de IA para la práctica del Derecho en Puerto Rico**, en formato Anthropic Skills (`SKILL.md`), utilizable por Claude Code, Claude Cowork y otros clientes compatibles con skills o MCP. Incluye verificación de citas, investigación jurídica, redacción de memorandos, mociones de sentencia sumaria bajo la Regla 36, recursos administrativos bajo la LPAU, revisión y redacción contractual conforme al Código Civil de 2020, litigación civil, responsabilidad profesional y práctica notarial. Licencia MIT y abierta a contribuciones.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Jurisdiction](https://img.shields.io/badge/jurisdiction-Puerto%20Rico-005BBB)
-![Format: Anthropic Skills](https://img.shields.io/badge/format-Anthropic_Skills-orange)
-![Language](https://img.shields.io/badge/language-espa%C3%B1ol-blue)
+[![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-yellow.svg)](LICENSE)
+![Jurisdicción](https://img.shields.io/badge/jurisdicci%C3%B3n-Puerto%20Rico-005BBB)
+![Formato: Anthropic Skills](https://img.shields.io/badge/formato-Anthropic_Skills-orange)
+![Idioma](https://img.shields.io/badge/idioma-espa%C3%B1ol-blue)
 
 ---
 
-## Table of contents
+## Tabla de contenido
 
-- [What this repository is](#what-this-repository-is)
-- [What a skill looks like](#what-a-skill-looks-like)
-- [Skills in this repository](#skills-in-this-repository)
-- [Using these skills](#using-these-skills)
-- [Why Puerto Rico needs its own set](#why-puerto-rico-needs-its-own-set)
-- [Contributing](#contributing)
-- [Disclaimer](#disclaimer)
-- [License](#license)
-- [Related projects](#related-projects)
+- [Qué es este repositorio](#qué-es-este-repositorio)
+- [Cómo luce un skill](#cómo-luce-un-skill)
+- [Skills disponibles](#skills-disponibles)
+- [Cómo utilizar estos skills](#cómo-utilizar-estos-skills)
+- [Por qué Puerto Rico necesita su propio conjunto](#por-qué-puerto-rico-necesita-su-propio-conjunto)
+- [Cómo contribuir](#cómo-contribuir)
+- [Descargo de responsabilidad](#descargo-de-responsabilidad)
+- [Licencia](#licencia)
+- [Proyectos relacionados](#proyectos-relacionados)
 
 ---
 
-## What this repository is
+## Qué es este repositorio
 
-A **legal AI skill** is a Markdown file (`SKILL.md`) describing one applied
-legal task — *"revisa esta cita conforme a LPRA," "prepara una moción de
-sentencia sumaria bajo Regla 36," "hay conflicto de interés aquí?"* — in a
-structured format an AI agent can follow deterministically: when to trigger,
-what steps to take, what the output must contain.
+Un **skill jurídico de IA** es un archivo Markdown (`SKILL.md`) que describe una tarea jurídica aplicada —por ejemplo: *«revisa esta cita conforme a LPRA»*, *«prepara una moción de sentencia sumaria bajo la Regla 36»* o *«¿existe un conflicto de interés aquí?»*— mediante instrucciones estructuradas que un agente de IA puede seguir de manera consistente: cuándo debe activarse, qué pasos debe realizar y qué debe contener el producto final.
 
-Every skill lives under:
+Cada skill se encuentra bajo:
 
-```
-pr/{practice}/skills/{slug}/SKILL.md
+```text
+pr/{area-de-practica}/skills/{slug}/SKILL.md
 ```
 
-and is grounded in Puerto Rico primary sources — the LPRA-codified statutes,
-Tribunal Supremo and Tribunal de Apelaciones jurisprudence, and the specific
-procedural rules (Reglas de Procedimiento Civil, LPAU, Cánones de Ética)
-that actually govern practice on the island, not a generic U.S.-mainland or
-Spain template with the names swapped.
+y está diseñado a partir de fuentes y prácticas propias de Puerto Rico: estatutos codificados en LPRA, jurisprudencia del Tribunal Supremo y del Tribunal de Apelaciones, reglas procesales, la LPAU, el Código Civil de 2020, las Reglas de Conducta Profesional vigentes y las normas notariales aplicables. La finalidad es evitar plantillas genéricas de Estados Unidos o España que no reflejan correctamente el Derecho puertorriqueño.
 
-## What a skill looks like
+## Cómo luce un skill
 
 ```yaml
 ---
 name: pr-summary-judgment-motion
-title: Puerto Rico Summary Judgment Motion Builder (Regla 36)
-description: Structures a moción de sentencia sumaria or its opposition under
-  Regla 36 of Puerto Rico's Reglas de Procedimiento Civil, including the
-  numbered statement of uncontested material facts the Tribunal Supremo requires.
+title: Redacción de Moción de Sentencia Sumaria en Puerto Rico (Regla 36)
+description: Estructura una moción de sentencia sumaria o su oposición bajo la Regla 36 de Procedimiento Civil de Puerto Rico, incluyendo la relación numerada de hechos materiales incontrovertidos exigida por la práctica puertorriqueña.
 license: MIT
 jurisdiction: pr
 practice: litigation
 language: es
 ---
 
-# Skill title
+# Título del skill
 
-## When to apply
-Triggers, example prompts, what's out of scope.
+## Cuándo aplicar
+Disparadores, ejemplos de solicitudes y asuntos fuera de alcance.
 
-## Algorithm
-Step-by-step instructions for the agent.
+## Algoritmo
+Instrucciones paso a paso para el agente.
 
-## Output contract
-What the answer must contain — format, citations, the mandatory disclaimer.
+## Contrato de salida
+Qué debe contener la respuesta: formato, citas requeridas y el descargo de responsabilidad obligatorio.
 ```
 
-See [`pr/CLAUDE.md`](pr/CLAUDE.md) for the jurisdiction-wide rules every skill
-here follows: sources-of-law priority, citation discipline, and the mandatory
-disclaimer.
+Consulte [`pr/CLAUDE.md`](pr/CLAUDE.md) para las reglas generales aplicables a todos los skills de Puerto Rico: jerarquía de fuentes, disciplina de citas, idioma de trabajo y descargo de responsabilidad obligatorio.
 
-## Skills in this repository
+## Skills disponibles
 
-19 skills across 6 practice areas — enough to run a matter end to end: intake
-and engagement, research, prescription/deadline screening, pleadings,
-discovery, motion practice, contracts, appeal, and a citation/filing-readiness
-QC gate before anything goes out the door. Full table with descriptions:
-[`pr/README.md`](pr/README.md).
+El repositorio incluye skills para investigación, litigación, apelaciones, asuntos administrativos, contratos, responsabilidad profesional y práctica notarial. El catálogo completo y actualizado se encuentra en [`pr/README.md`](pr/README.md).
 
-| Practice area | Skills |
+| Área de práctica | Ejemplos de skills |
 |---|---|
 | General | `pr-legal-citation` · `pr-legal-research` · `pr-legal-memo-drafting` · `pr-citation-verifier` · `pr-filing-readiness` · `pr-prescription-analysis` |
-| Litigation | `pr-summary-judgment-motion` · `pr-motion-drafting` · `pr-complaint-drafting` · `pr-answer-drafting` · `pr-discovery-drafting` · `pr-discovery-response` · `pr-doctrine-to-facts` |
-| Appellate | `pr-appellate-drafting` |
-| Administrative | `pr-agency-appeal-lpau` |
-| Contracts | `pr-contract-review` · `pr-contract-drafting` |
-| Professional responsibility | `pr-ethics-conflict-check` · `pr-engagement-letter` |
+| Litigación | `pr-summary-judgment-motion` · `pr-motion-drafting` · `pr-complaint-drafting` · `pr-answer-drafting` · `pr-motion-dismiss` · `pr-reconsideration-motion` · `pr-civil-deadlines` · `pr-discovery-drafting` · `pr-discovery-response` |
+| Apelaciones | `pr-appellate-drafting` |
+| Administrativo | `pr-agency-appeal-lpau` |
+| Contratos | `pr-contract-review` · `pr-contract-drafting` |
+| Notarial | `pr-notarial-instrument-drafting` |
+| Responsabilidad profesional | `pr-ethics-conflict-check` · `pr-engagement-letter` |
 
-This is still a starter set. Practice areas like family, criminal, real
-estate, labor/employment beyond LPAU appeals, and tax are open — see
-[Contributing](#contributing).
+Este proyecto continuará ampliándose con nuevas áreas de práctica puertorriqueña, incluyendo familia, penal, bienes raíces, laboral y empleo, contribuciones y otros campos especializados.
 
-## Using these skills
+## Cómo utilizar estos skills
 
-Clone the repo and point a Claude Code / skills-compatible client at the
-`pr/` directory, or copy an individual `{slug}/SKILL.md` folder into your own
-skills directory. No server, no build step — it's Markdown.
+Clone el repositorio y dirija Claude Code u otro cliente compatible con skills a la carpeta `pr/`. También puede copiar únicamente la carpeta del skill que desee utilizar.
 
 ```bash
 git clone https://github.com/ericalopezfebo/legal-skills-pr.git
 ```
 
-## Why Puerto Rico needs its own set
+No se requiere servidor ni proceso de compilación: los skills son archivos Markdown.
 
-Puerto Rico is not "Spain with a different flag" and not "another U.S.
-state." It runs a hybrid system — a Spanish-derived Código Civil (fully
-recodified in 2020) for private law, layered under a U.S. constitutional and
-federal-court structure, litigated mostly in Spanish before the Tribunal
-Supremo and Tribunal de Apelaciones, with its own procedural rules (Reglas de
-Procedimiento Civil de 2009, LPAU de 2017) and its own administrative bodies
-(like CASARH, still widely called CASP). Generic "US" or "ES" legal skills
-get the citation format, the standard of review, and often the governing
-code itself wrong. This repository exists so that gap has an open-source
-answer.
+## Por qué Puerto Rico necesita su propio conjunto
 
-## Contributing
+Puerto Rico tiene un ordenamiento jurídico híbrido. El Derecho privado se desarrolla sobre una tradición civilista, hoy articulada en buena medida mediante el Código Civil de 2020, mientras que el Derecho constitucional, federal y diversas áreas procesales se relacionan con el sistema jurídico estadounidense. La práctica cotidiana ocurre mayormente en español ante tribunales y agencias propias, con reglas, términos, organismos y métodos de citación particulares.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: fork, add a
-`pr/{practice}/skills/{slug}/SKILL.md`, open a PR. No confidential or
-matter-specific content (no real client names, judges, or pending-case
-material) — skills here are general-purpose.
+Por ello, un skill jurídico genérico para «Estados Unidos» o «España» puede equivocarse en la norma aplicable, el estándar de revisión, la estructura procesal, la cita o incluso el código vigente. Este repositorio pretende ofrecer una base abierta y específicamente puertorriqueña para esas tareas.
 
-## Disclaimer
+## Cómo contribuir
 
-Every skill in this repository is informational and does not constitute
-legal advice. Output must be reviewed by an attorney admitted to practice in
-Puerto Rico before being relied on, filed, or sent. See the full disclaimer
-and citation-discipline rules in [`pr/CLAUDE.md`](pr/CLAUDE.md).
+Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md). En términos generales:
 
-## License
+1. haga un fork del repositorio;
+2. añada un nuevo skill bajo `pr/{area-de-practica}/skills/{slug}/SKILL.md`;
+3. abra un pull request.
 
-[MIT](LICENSE). Use, modify, and distribute freely, including commercially —
-attribution appreciated.
+No incluya información confidencial ni contenido identificable de clientes, jueces o casos pendientes. Los skills deben ser de uso general.
 
-## Related projects
+## Descargo de responsabilidad
 
-- [Anthropic Skills](https://www.anthropic.com/news/skills) — the underlying
-  `SKILL.md` format.
-- [`legal-skills-open`](https://github.com/ThomasMoreAI/legal-skills-open) —
-  the multi-jurisdiction legal-skills library this repo's format is modeled on.
-- [`zubair-trabzada/ai-legal-claude`](https://github.com/zubair-trabzada/ai-legal-claude)
-  and [`joe-shenouda/awesome-cyber-skills`](https://github.com/joe-shenouda/awesome-cyber-skills) —
-  inspiration for structuring a domain-specific Claude skills catalogue.
+Los skills y sus productos son herramientas de apoyo. No sustituyen el juicio profesional ni la revisión de un abogado admitido a la práctica en Puerto Rico. Todo documento, análisis, cita o conclusión debe cotejarse con la ley y las reglas vigentes antes de utilizarse, presentarse o enviarse.
+
+Consulte el texto completo del descargo y las reglas de citación en [`pr/CLAUDE.md`](pr/CLAUDE.md).
+
+## Licencia
+
+[MIT](LICENSE). Puede utilizar, modificar y distribuir el contenido, incluso con fines comerciales, sujeto a los términos de la licencia.
+
+## Proyectos relacionados
+
+- [Anthropic Skills](https://www.anthropic.com/news/skills) — formato subyacente de archivos `SKILL.md`.
+- [`legal-skills-open`](https://github.com/ThomasMoreAI/legal-skills-open) — biblioteca multijurisdiccional que sirvió de referencia estructural.
+- [`zubair-trabzada/ai-legal-claude`](https://github.com/zubair-trabzada/ai-legal-claude) y [`joe-shenouda/awesome-cyber-skills`](https://github.com/joe-shenouda/awesome-cyber-skills) — referencias de organización para catálogos especializados de skills.
 
 ---
 
-*Started by [@ericalopezfebo](https://github.com/ericalopezfebo). Issues and
-pull requests welcome.*
+*Proyecto iniciado por [@ericalopezfebo](https://github.com/ericalopezfebo). Se aceptan issues y pull requests.*
