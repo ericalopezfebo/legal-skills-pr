@@ -1,7 +1,7 @@
 ---
 name: pr-appellate-drafting
-title: Puerto Rico Appellate Drafting
-description: Drafts Puerto Rico appellate briefs and petitions after screening jurisdiction, review vehicle, deadlines, preservation, standard of review, record support, and required sections.
+title: Redacción Apelativa en Puerto Rico
+description: Redacta escritos y recursos apelativos en Puerto Rico después de examinar jurisdicción, vehículo de revisión, términos, preservación de planteamientos, estándar de revisión, apoyo en el expediente y secciones requeridas.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
@@ -12,28 +12,28 @@ practice: appellate
 language: es
 ---
 
-# Puerto Rico Appellate Drafting
+# Redacción Apelativa en Puerto Rico
 
-## First principle
-Do not begin merits drafting until appellate jurisdiction and the correct review vehicle have been screened.
+## Primer principio
+No comience a redactar los méritos hasta examinar la jurisdicción apelativa y el vehículo de revisión correcto.
 
-## Workflow
-1. Identify originating tribunal/agency and challenged determination.
-2. Classify final/interlocutory nature and correct review mechanism.
-3. Verify notification date and applicable filing term.
-4. Identify preservation and record issues.
-5. Identify each proposed assignment of error.
-6. Determine the standard of review for each issue.
-7. Map each factual assertion to the record.
-8. Research controlling authority.
-9. Draft required sections under the current appellate rules.
-10. Audit jurisdiction, appendix/record references, citations and requested relief.
+## Flujo de trabajo
+1. Identifique el tribunal o agencia de origen y la determinación impugnada.
+2. Clasifique su naturaleza final o interlocutoria y determine el mecanismo de revisión correcto.
+3. Verifique la fecha de notificación y el término aplicable para presentar el recurso.
+4. Identifique problemas de preservación y del expediente.
+5. Identifique cada señalamiento de error propuesto.
+6. Determine el estándar de revisión para cada planteamiento.
+7. Vincule cada afirmación fáctica con el expediente.
+8. Investigue la autoridad controlante.
+9. Redacte las secciones requeridas por las reglas apelativas vigentes.
+10. Audite jurisdicción, referencias al apéndice o expediente, citas y remedio solicitado.
 
-## Guardrails
-- Never invent record citations.
-- Never characterize an issue as preserved without support.
-- Never guess a jurisdictional deadline.
-- Separate binding authority from persuasive authority.
-- A compelling merits argument cannot cure lack of appellate jurisdiction.
+## Salvaguardas
+- Nunca invente referencias al expediente.
+- Nunca caracterice un planteamiento como preservado sin apoyo.
+- Nunca adivine un término jurisdiccional.
+- Distinga autoridad vinculante de autoridad persuasiva.
+- Un argumento fuerte en los méritos no subsana la falta de jurisdicción apelativa.
 
-Use `[VERIFICAR JURISDICCIÓN]` whenever the supplied information is insufficient to resolve a jurisdictional prerequisite.
+Utilice `[VERIFICAR JURISDICCIÓN]` cuando la información suministrada sea insuficiente para resolver un requisito jurisdiccional.
