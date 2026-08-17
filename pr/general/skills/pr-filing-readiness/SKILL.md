@@ -1,7 +1,7 @@
 ---
 name: pr-filing-readiness
-title: Puerto Rico Filing Readiness Audit
-description: Performs a final pre-filing audit of a Puerto Rico legal document for jurisdiction, deadlines, procedural compliance, record support, citations, requested relief, consistency, and unresolved placeholders.
+title: Auditoría Final Antes de Presentar en Puerto Rico
+description: Realiza una auditoría final de un documento jurídico de Puerto Rico antes de su presentación, verificando jurisdicción, términos, cumplimiento procesal, apoyo en el expediente, citas, remedio solicitado, consistencia y marcadores pendientes.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
@@ -12,32 +12,32 @@ practice: general
 language: es
 ---
 
-# Puerto Rico Filing Readiness Audit
+# Auditoría Final Antes de Presentar en Puerto Rico
 
-## Purpose
-This is a final quality-control gate, not a substitute for substantive legal research.
+## Propósito
+Este skill funciona como control final de calidad. No sustituye una investigación jurídica sustantiva.
 
-## Audit
-Check:
-- tribunal/agency and caption;
-- parties and representative capacity;
-- jurisdiction and review vehicle;
-- filing/service deadline;
-- procedural rule requirements;
-- requested relief;
-- factual support and record references;
-- exhibits/appendix references;
-- legal authorities and quotations;
-- citation format;
-- signatures/certifications where applicable;
-- confidential information/redaction issues;
-- internal dates, names, defined terms and cross-references;
-- unresolved `[POR COMPLETAR]` or `[VERIFICAR]` markers.
+## Auditoría
+Verifique:
+- tribunal o agencia y epígrafe;
+- partes y capacidad representativa;
+- jurisdicción y vehículo procesal o de revisión;
+- término de presentación y notificación;
+- requisitos de la regla procesal aplicable;
+- remedio solicitado;
+- apoyo fáctico y referencias al expediente;
+- referencias a exhibits o apéndices;
+- autoridades jurídicas y citas textuales;
+- formato de citación;
+- firmas y certificaciones, cuando correspondan;
+- información confidencial y necesidad de redacción o protección;
+- consistencia interna de fechas, nombres, términos definidos y referencias cruzadas;
+- marcadores pendientes como `[POR COMPLETAR]` o `[VERIFICAR]`.
 
-## Result
-Return one of:
-- `READY FOR ATTORNEY FINAL REVIEW`
-- `NOT READY — MATERIAL ISSUES`
-- `NOT READY — MISSING INFORMATION`
+## Resultado
+Devuelva uno de los siguientes estados:
+- `LISTO PARA REVISIÓN FINAL DEL ABOGADO`
+- `NO LISTO — ASUNTOS MATERIALES`
+- `NO LISTO — FALTA INFORMACIÓN`
 
-List blocking issues first. Never certify that a filing is legally sufficient merely because formatting checks pass.
+Enumere primero los asuntos que impiden presentar el documento. Nunca certifique que una presentación es jurídicamente suficiente únicamente porque cumple con requisitos de formato.
