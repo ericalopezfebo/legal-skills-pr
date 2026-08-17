@@ -52,6 +52,12 @@ Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the 
 | [`pr-contract-review`](contracts/skills/pr-contract-review/) | Reviews an existing contract against the 2020 Código Civil |
 | [`pr-contract-drafting`](contracts/skills/pr-contract-drafting/) | Drafts, revises, or adapts a contract or clause |
 
+## Notarial
+
+| Skill | What it does |
+|---|---|
+| [`pr-notarial-instrument-drafting`](notarial/skills/pr-notarial-instrument-drafting/) | Drafts and audits Puerto Rico escrituras públicas and actas notariales from verified facts and current notarial/substantive law |
+
 ## Professional responsibility
 
 | Skill | What it does |
@@ -70,6 +76,7 @@ Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the 
 - Reconsideration: `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
 - Appeal: `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
 - Contract: `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` (when legal authorities are stated)
+- Notarial instrument: `pr-legal-research` (when current-law verification is needed) → `pr-notarial-instrument-drafting` → `pr-citation-verifier`
 - New matter: `pr-ethics-conflict-check` → `pr-engagement-letter`
 
 Want to add a practice area or skill? See the root [`CONTRIBUTING.md`](../CONTRIBUTING.md).
