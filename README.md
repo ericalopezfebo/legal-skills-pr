@@ -81,17 +81,23 @@ disclaimer.
 
 ## Skills in this repository
 
-| Practice area | Skill | What it does |
-|---|---|---|
-| General | [`pr-legal-citation`](pr/general/skills/pr-legal-citation/) | Checks/formats citations to LPRA statutes, DPR case law, and regulations |
-| General | [`pr-legal-research`](pr/general/skills/pr-legal-research/) | Turns a PR legal question into a sourced research memo |
-| Litigation | [`pr-summary-judgment-motion`](pr/litigation/skills/pr-summary-judgment-motion/) | Builds/opposes a moción de sentencia sumaria (Regla 36) |
-| Administrative | [`pr-agency-appeal-lpau`](pr/administrative/skills/pr-agency-appeal-lpau/) | Structures an LPAU agency appeal, incl. CASARH/CASP personnel appeals |
-| Contracts | [`pr-contract-review`](pr/contracts/skills/pr-contract-review/) | Reviews/drafts a contract against the 2020 Código Civil |
-| Professional responsibility | [`pr-ethics-conflict-check`](pr/professional-responsibility/skills/pr-ethics-conflict-check/) | Screens for conflicts, confidentiality, and ad-rule issues under the Cánones |
+19 skills across 6 practice areas — enough to run a matter end to end: intake
+and engagement, research, prescription/deadline screening, pleadings,
+discovery, motion practice, contracts, appeal, and a citation/filing-readiness
+QC gate before anything goes out the door. Full table with descriptions:
+[`pr/README.md`](pr/README.md).
 
-This is a starter set. More practice areas (family, criminal, real estate,
-labor/employment beyond LPAU appeals, tax) are open — see
+| Practice area | Skills |
+|---|---|
+| General | `pr-legal-citation` · `pr-legal-research` · `pr-legal-memo-drafting` · `pr-citation-verifier` · `pr-filing-readiness` · `pr-prescription-analysis` |
+| Litigation | `pr-summary-judgment-motion` · `pr-motion-drafting` · `pr-complaint-drafting` · `pr-answer-drafting` · `pr-discovery-drafting` · `pr-discovery-response` · `pr-doctrine-to-facts` |
+| Appellate | `pr-appellate-drafting` |
+| Administrative | `pr-agency-appeal-lpau` |
+| Contracts | `pr-contract-review` · `pr-contract-drafting` |
+| Professional responsibility | `pr-ethics-conflict-check` · `pr-engagement-letter` |
+
+This is still a starter set. Practice areas like family, criminal, real
+estate, labor/employment beyond LPAU appeals, and tax are open — see
 [Contributing](#contributing).
 
 ## Using these skills

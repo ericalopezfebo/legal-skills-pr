@@ -2,13 +2,63 @@
 
 Skills for practice under Puerto Rico law. See [`CLAUDE.md`](CLAUDE.md) for the jurisdiction's legal family, sources of law, and mandatory citation/disclaimer conventions — every skill below is written to follow it.
 
-| Practice area | Skill | What it does |
-|---|---|---|
-| [`general/`](general/) | [`pr-legal-citation`](general/skills/pr-legal-citation/) | Checks and formats citations to PR statutes, case law, and regulations |
-| [`general/`](general/) | [`pr-legal-research`](general/skills/pr-legal-research/) | Structures research on a PR legal question into a sourced memo |
-| [`litigation/`](litigation/) | [`pr-summary-judgment-motion`](litigation/skills/pr-summary-judgment-motion/) | Builds/opposes a moción de sentencia sumaria under Regla 36 |
-| [`administrative/`](administrative/) | [`pr-agency-appeal-lpau`](administrative/skills/pr-agency-appeal-lpau/) | Structures an LPAU agency appeal, incl. CASARH/CASP personnel appeals |
-| [`contracts/`](contracts/) | [`pr-contract-review`](contracts/skills/pr-contract-review/) | Reviews/drafts a contract against the 2020 Código Civil |
-| [`professional-responsibility/`](professional-responsibility/) | [`pr-ethics-conflict-check`](professional-responsibility/skills/pr-ethics-conflict-check/) | Screens for conflicts, confidentiality, and advertising issues under the Cánones |
+## General
+
+| Skill | What it does |
+|---|---|
+| [`pr-legal-citation`](general/skills/pr-legal-citation/) | Checks and formats citations to PR statutes, case law, and regulations |
+| [`pr-legal-research`](general/skills/pr-legal-research/) | Structures research on a PR legal question into a sourced memo |
+| [`pr-legal-memo-drafting`](general/skills/pr-legal-memo-drafting/) | Drafts a formal, objective legal research memorandum |
+| [`pr-citation-verifier`](general/skills/pr-citation-verifier/) | Verifies that a cited authority exists, is current, and actually supports the proposition |
+| [`pr-filing-readiness`](general/skills/pr-filing-readiness/) | Final pre-filing quality-control audit of a document |
+| [`pr-prescription-analysis`](general/skills/pr-prescription-analysis/) | Analyzes limitations/caducity periods through a claim-specific chronology |
+
+## Litigation
+
+| Skill | What it does |
+|---|---|
+| [`pr-summary-judgment-motion`](litigation/skills/pr-summary-judgment-motion/) | Builds/opposes a moción de sentencia sumaria (Regla 36) |
+| [`pr-motion-drafting`](litigation/skills/pr-motion-drafting/) | General-purpose motion/opposition/reply drafting engine |
+| [`pr-complaint-drafting`](litigation/skills/pr-complaint-drafting/) | Drafts a civil complaint from verified facts and causes of action |
+| [`pr-answer-drafting`](litigation/skills/pr-answer-drafting/) | Drafts a paragraph-by-paragraph answer and supported affirmative defenses |
+| [`pr-discovery-drafting`](litigation/skills/pr-discovery-drafting/) | Drafts interrogatories, production requests, and admissions |
+| [`pr-discovery-response`](litigation/skills/pr-discovery-response/) | Drafts discovery responses and good-faith objections |
+| [`pr-doctrine-to-facts`](litigation/skills/pr-doctrine-to-facts/) | Connects citations already in a draft to the case's specific facts |
+
+## Appellate
+
+| Skill | What it does |
+|---|---|
+| [`pr-appellate-drafting`](appellate/skills/pr-appellate-drafting/) | Drafts an appellate brief/petition after jurisdiction and deadline screening |
+
+## Administrative
+
+| Skill | What it does |
+|---|---|
+| [`pr-agency-appeal-lpau`](administrative/skills/pr-agency-appeal-lpau/) | Structures an LPAU agency appeal, incl. CASARH/CASP personnel appeals |
+
+## Contracts
+
+| Skill | What it does |
+|---|---|
+| [`pr-contract-review`](contracts/skills/pr-contract-review/) | Reviews an existing contract against the 2020 Código Civil |
+| [`pr-contract-drafting`](contracts/skills/pr-contract-drafting/) | Drafts, revises, or adapts a contract or clause |
+
+## Professional responsibility
+
+| Skill | What it does |
+|---|---|
+| [`pr-ethics-conflict-check`](professional-responsibility/skills/pr-ethics-conflict-check/) | Screens for conflicts, confidentiality, and ad-rule issues under the Cánones |
+| [`pr-engagement-letter`](professional-responsibility/skills/pr-engagement-letter/) | Drafts a client engagement letter / hoja de encargo |
+
+---
+
+**Composable workflows:**
+
+- Complaint: `pr-legal-research` → `pr-prescription-analysis` → `pr-complaint-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
+- Motion: specialized procedural skill (e.g. `pr-summary-judgment-motion`) → `pr-motion-drafting` → `pr-doctrine-to-facts` → `pr-citation-verifier` → `pr-filing-readiness`
+- Appeal: `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
+- Contract: `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` (when legal authorities are stated)
+- New matter: `pr-ethics-conflict-check` → `pr-engagement-letter`
 
 Want to add a practice area or skill? See the root [`CONTRIBUTING.md`](../CONTRIBUTING.md).
