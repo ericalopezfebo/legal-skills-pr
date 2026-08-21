@@ -127,3 +127,8 @@ Consulte el texto completo del descargo y las reglas de citación en [`pr/CLAUDE
 ---
 
 *Proyecto iniciado por [@ericalopezfebo](https://github.com/ericalopezfebo). Se aceptan issues y pull requests.*
+
+
+## Práctica federal en Puerto Rico
+
+Se añadieron 17 skills originales para jurisdicción y litigación civil federal, procedimiento penal y sentencing, evidencia federal, quiebras, apelaciones ante el Primer Circuito y ética de práctica federal. Cada workflow exige reglas y fuentes oficiales vigentes, distingue Derecho federal de Derecho de Puerto Rico y mantiene revisión por abogado.

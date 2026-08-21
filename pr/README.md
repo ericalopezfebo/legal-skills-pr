@@ -132,3 +132,8 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 - **Nuevo asunto:** `pr-ethics-conflict-check` → `pr-engagement-letter`
 
 Para añadir una nueva área de práctica o un skill, consulte [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+
+
+## Práctica federal en Puerto Rico
+
+Se añadieron 17 skills originales para jurisdicción y litigación civil federal, procedimiento penal y sentencing, evidencia federal, quiebras, apelaciones ante el Primer Circuito y ética de práctica federal. Cada workflow exige reglas y fuentes oficiales vigentes, distingue Derecho federal de Derecho de Puerto Rico y mantiene revisión por abogado.
