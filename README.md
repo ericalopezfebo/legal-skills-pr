@@ -73,6 +73,10 @@ El repositorio incluye skills para investigación, litigación, apelaciones, asu
 | Apelaciones | `pr-appellate-drafting` |
 | Administrativo | `pr-agency-appeal-lpau` |
 | Contratos | `pr-contract-review` · `pr-contract-drafting` |
+| Laboral y empleo | `pr-worker-classification` · `pr-employment-agreement` · `pr-severance-agreement` · `pr-employee-handbook` |
+| Privacidad y ciberseguridad | `pr-data-breach-response` · `pr-incident-response-plan` · `pr-privacy-law-applicability` · `pr-data-retention-policy` |
+| Contratación gubernamental | `pr-government-contract-compliance` |
+| Propiedad intelectual | `pr-dmca-takedown-analysis` |
 | Notarial | `pr-notarial-instrument-drafting` |
 | Responsabilidad profesional | `pr-ethics-conflict-check` · `pr-engagement-letter` |
 

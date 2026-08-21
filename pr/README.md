@@ -34,6 +34,9 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 | [`pr-discovery-drafting`](litigation/skills/pr-discovery-drafting/) | Redacta interrogatorios, requerimientos de producción y requerimientos de admisiones |
 | [`pr-discovery-response`](litigation/skills/pr-discovery-response/) | Redacta contestaciones a descubrimiento y objeciones de buena fe |
 | [`pr-doctrine-to-facts`](litigation/skills/pr-doctrine-to-facts/) | Conecta las autoridades ya citadas en un borrador con los hechos específicos del caso |
+| [`pr-deposition-preparation`](litigation/skills/pr-deposition-preparation/) | Prepara deposiciones con módulos, exhibits y límites éticos |
+| [`pr-legal-hold`](litigation/skills/pr-legal-hold/) | Diseña avisos y seguimiento de preservación |
+| [`pr-esi-protocol`](litigation/skills/pr-esi-protocol/) | Negocia protocolos de información electrónica |
 
 ## Apelaciones
 
@@ -53,6 +56,48 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 |---|---|
 | [`pr-contract-review`](contracts/skills/pr-contract-review/) | Revisa contratos existentes conforme al Código Civil de Puerto Rico de 2020 |
 | [`pr-contract-drafting`](contracts/skills/pr-contract-drafting/) | Redacta, revisa o adapta contratos y cláusulas |
+| [`pr-confidentiality-agreement`](contracts/skills/pr-confidentiality-agreement/) | Redacta acuerdos de confidencialidad |
+| [`pr-independent-contractor-agreement`](contracts/skills/pr-independent-contractor-agreement/) | Redacta contratos de servicios con control de clasificación |
+| [`pr-technology-license-agreement`](contracts/skills/pr-technology-license-agreement/) | Redacta licencias de software, datos y tecnología |
+| [`pr-settlement-agreement`](contracts/skills/pr-settlement-agreement/) | Redacta acuerdos de transacción |
+
+## Laboral y empleo
+
+| Skill | Qué hace |
+|---|---|
+| [`pr-worker-classification`](employment/skills/pr-worker-classification/) | Analiza empleado versus contratista por régimen |
+| [`pr-employment-agreement`](employment/skills/pr-employment-agreement/) | Redacta contratos de empleo |
+| [`pr-severance-agreement`](employment/skills/pr-severance-agreement/) | Redacta acuerdos de separación y relevo |
+| [`pr-employee-handbook`](employment/skills/pr-employee-handbook/) | Diseña manuales de empleados |
+| [`pr-workplace-accommodation`](employment/skills/pr-workplace-accommodation/) | Estructura procesos de acomodo |
+| [`pr-retaliation-claim-analysis`](employment/skills/pr-retaliation-claim-analysis/) | Analiza represalias sin mezclar estatutos |
+
+## Privacidad y protección de datos
+
+| Skill | Qué hace |
+|---|---|
+| [`pr-data-breach-response`](data-protection/skills/pr-data-breach-response/) | Coordina respuesta y notificaciones por violaciones de datos |
+| [`pr-privacy-law-applicability`](data-protection/skills/pr-privacy-law-applicability/) | Determina regímenes de privacidad aplicables |
+| [`pr-data-retention-policy`](data-protection/skills/pr-data-retention-policy/) | Diseña retención, legal hold y destrucción |
+
+## Ciberseguridad
+
+| Skill | Qué hace |
+|---|---|
+| [`pr-incident-response-plan`](cybersecurity/skills/pr-incident-response-plan/) | Diseña planes jurídicos de respuesta a incidentes |
+| [`pr-byod-policy`](cybersecurity/skills/pr-byod-policy/) | Redacta políticas de dispositivos personales |
+
+## Contratación gubernamental
+
+| Skill | Qué hace |
+|---|---|
+| [`pr-government-contract-compliance`](government-contracts/skills/pr-government-contract-compliance/) | Audita elegibilidad, licitación, contrato y ejecución |
+
+## Propiedad intelectual
+
+| Skill | Qué hace |
+|---|---|
+| [`pr-dmca-takedown-analysis`](intellectual-property/skills/pr-dmca-takedown-analysis/) | Evalúa avisos y contranotificaciones DMCA |
 
 ## Notarial
 
@@ -79,6 +124,10 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 - **Reconsideración:** `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Apelación:** `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Contrato:** `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` cuando se incluyan autoridades jurídicas
+- **Incidente de datos:** `pr-incident-response-plan` → `pr-data-breach-response` → `pr-privacy-law-applicability`
+- **Contratista:** `pr-worker-classification` → `pr-independent-contractor-agreement` → `pr-contract-review`
+- **Litigio electrónico:** `pr-legal-hold` → `pr-esi-protocol` → `pr-filing-readiness`
+- **Contrato gubernamental:** `pr-government-contract-compliance` → `pr-contract-review` → `pr-citation-verifier`
 - **Instrumento notarial:** `pr-legal-research` cuando sea necesaria verificación de Derecho vigente → `pr-notarial-instrument-drafting` → `pr-citation-verifier`
 - **Nuevo asunto:** `pr-ethics-conflict-check` → `pr-engagement-letter`
 
