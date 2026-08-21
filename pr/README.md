@@ -11,6 +11,7 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 | [`pr-legal-memo-drafting`](general/skills/pr-legal-memo-drafting/) | Redacta un memorando jurídico formal y objetivo |
 | [`pr-citation-verifier`](general/skills/pr-citation-verifier/) | Verifica que una autoridad citada exista, esté vigente y realmente apoye la proposición para la cual se cita |
 | [`pr-filing-readiness`](general/skills/pr-filing-readiness/) | Realiza una auditoría final de control de calidad antes de presentar un documento |
+| [`pr-legal-document-sanitization`](general/skills/pr-legal-document-sanitization/) | Desidentifica documentos antes de analizar o reutilizar sus patrones de tono y formato |
 | [`pr-prescription-analysis`](general/skills/pr-prescription-analysis/) | Analiza términos prescriptivos o de caducidad mediante una cronología específica de la reclamación |
 
 ## Litigación
@@ -19,6 +20,7 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 |---|---|
 | [`pr-summary-judgment-motion`](litigation/skills/pr-summary-judgment-motion/) | Redacta u opone una moción de sentencia sumaria bajo la Regla 36 |
 | [`pr-motion-drafting`](litigation/skills/pr-motion-drafting/) | Motor general para redactar mociones, oposiciones y réplicas |
+| [`pr-pretrial-report-drafting`](litigation/skills/pr-pretrial-report-drafting/) | Prepara informes de conferencia con antelación al juicio o vista |
 | [`pr-complaint-drafting`](litigation/skills/pr-complaint-drafting/) | Redacta una demanda civil a partir de hechos y causas de acción verificadas |
 | [`pr-answer-drafting`](litigation/skills/pr-answer-drafting/) | Redacta una contestación alegación por alegación y defensas afirmativas fundamentadas |
 | [`pr-motion-assume-representation`](litigation/skills/pr-motion-assume-representation/) | Redacta una moción asumiendo representación legal, incluso en escenarios de co-representación o sustitución |
@@ -72,6 +74,7 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 - **Demanda:** `pr-legal-research` → `pr-prescription-analysis` → `pr-complaint-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Contestación:** `pr-civil-deadlines` → `pr-answer-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Moción:** skill procesal especializado, por ejemplo `pr-motion-dismiss` o `pr-summary-judgment-motion` → `pr-motion-drafting` → `pr-doctrine-to-facts` → `pr-citation-verifier` → `pr-filing-readiness`
+- **Informe pretrial o de vista:** `pr-legal-document-sanitization` si se usan modelos → `pr-pretrial-report-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Controversia de descubrimiento:** `pr-discovery-response` → `pr-motion-compel-discovery` → `pr-filing-readiness`
 - **Reconsideración:** `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Apelación:** `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
