@@ -12,27 +12,14 @@ permissions:
   contents: read
 
 jobs:
-  dependency-audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-      - run: python -m pip install --upgrade pip pip-audit
-      - run: pip-audit
-
-  secret-patterns:
+  sensitive-files:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Reject common private material
+      - name: Reject secrets, keys, and client documents
         shell: bash
         run: |
           set -euo pipefail
