@@ -1,149 +1,69 @@
 ---
 name: pr-motion-drafting
-title: Puerto Rico Motion Drafting
-description: Drafts and revises motions, oppositions, replies, and procedural requests for Puerto Rico court practice. Use for a generic motion-drafting task when no more specific skill controls. Identifies the requested relief, procedural posture, governing rule, factual support, authority, and filing structure without inventing record facts or citations.
+title: Redacción de Mociones en Puerto Rico
+description: Redacta y revisa mociones, oposiciones, réplicas y solicitudes procesales para tribunales o agencias de Puerto Rico a partir de las partes, hechos, postura, remedio y anexos suministrados. Úsese como motor general cuando ningún skill procesal especializado controle completamente el escrito.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
-version: 0.1.0
+version: 0.2.0
 execution_mode: open
 jurisdiction: pr
 practice: litigation
 language: es
 ---
 
-# Puerto Rico Motion Drafting
+# Redacción de mociones en Puerto Rico
 
-## When to apply
+## Cuándo aplicar
 
-Use when the user asks to draft or revise:
-- a motion;
-- an opposition;
-- a reply;
-- a procedural request;
-- a filing seeking an order from a Puerto Rico court;
+Usar para redactar o revisar una moción, oposición, réplica, solicitud informativa o petición de orden. Un skill especializado controla sus requisitos particulares y este skill aporta la estructura, el tono y el ensamblaje final.
 
-and no more specific drafting skill fully controls the task.
+## Entrada mínima
 
-A specialized skill such as `pr-summary-judgment-motion` controls over this general skill on its specialized requirements.
+Recibir:
+- foro y número de caso;
+- partes y parte representada;
+- etapa procesal;
+- orden, controversia o evento activador;
+- hechos confirmados y fuente de cada uno;
+- remedio principal y alterno;
+- fecha prevista y anexos disponibles.
 
-## Core rule
+Preguntar solo por datos ausentes que cambien jurisdicción, término, carga, remedio o certificación. Nunca inventar historial, comunicaciones, acuerdos, fechas, entradas, prueba, citas ni anexos.
 
-A motion is not a generic essay. It is a request for judicial relief grounded in a procedural vehicle, a record, and applicable authority.
+## Algoritmo
 
-Never invent:
-- procedural history;
-- filing dates;
-- docket entries;
-- exhibits;
-- testimony;
-- quotations;
-- statutes, rules, cases, citations, or holdings.
+1. **Clasificar el escrito.** Determinar si es solicitud, oposición, réplica, reconsideración, desestimación, descubrimiento, relevo de representación u otro vehículo.
+2. **Verificar el marco.** Confirmar regla, ley especial, orden, estándar, carga, término y requisito de conferencia aplicables. Mantener `[VERIFICAR]` donde falte cotejo.
+3. **Construir la cronología.** Separar hechos confirmados, alegaciones, inferencias, hechos del expediente pendientes de verificación y derecho.
+4. **Seleccionar material.** Incluir únicamente hechos pertinentes al remedio y vincular cada afirmación con expediente, anejo, declaración o fuente identificable.
+5. **Organizar el escrito.** Respetar primero formulario u orden del foro. En ausencia de formato obligatorio, usar:
+   1. epígrafe;
+   2. título específico;
+   3. comparecencia;
+   4. remedio solicitado;
+   5. antecedentes procesales;
+   6. hechos pertinentes numerados;
+   7. derecho aplicable;
+   8. argumentación;
+   9. súplica;
+   10. firma, certificación y propuesta de orden cuando corresponda.
+6. **Redactar la argumentación.** Presentar cuestión, regla verificada, aplicación, mejor objeción contraria y respuesta. No confundir alegaciones con hechos establecidos.
+7. **Precisar la súplica.** Identificar quién solicita qué orden, respecto de qué asunto y qué remedio alterno procede.
+8. **Aplicar el tono.** Usar español jurídico sobrio, firme y respetuoso; párrafos numerados con una proposición principal; encabezados funcionales; voz activa cuando sea natural; y transiciones que expliquen relevancia.
+9. **Aplicar el formato.** Usar texto legible, cuerpo justificado, título centrado y numeración de páginas, salvo que el foro ordene otra cosa. No sacrificar legibilidad para imitar un modelo.
+10. **Auditar.** Verificar congruencia entre argumentación y súplica, autoridades, citas al expediente, anexos, firma, notificación, confidencialidad y marcadores.
 
-Use `[POR COMPLETAR]` or `[VERIFICAR]` when necessary.
+## Privacidad de modelos
 
-## Algorithm
+Antes de estudiar un escrito anterior, aplicar `pr-legal-document-sanitization`. No reutilizar nombres, direcciones, contactos, números de caso, firmas, metadatos ni hechos de otro asunto. Para el asunto actual, insertar datos identificativos únicamente cuando el usuario los suministre y autorice; de lo contrario, usar marcadores como `[PARTE]` y `[NÚMERO DE CASO]`.
 
-### 1. Identify posture
-Determine:
-- court and case type;
-- moving/responding party;
-- stage of proceedings;
-- exact relief requested;
-- whether the filing is a motion, opposition, reply, reconsideration, informative motion, extension, withdrawal, or another procedural vehicle.
+## Contrato de salida
 
-### 2. Identify governing authority
-Locate the procedural rule, statute, regulation, order, or controlling precedent authorizing or constraining the requested relief.
+Entregar el borrador completo, no una explicación genérica, seguido de:
+- información faltante;
+- autoridades o datos pendientes de verificación;
+- anexos o certificaciones pendientes;
+- estado `REVISIÓN DE ABOGADO REQUERIDA`.
 
-If the rule or deadline is uncertain, research before drafting.
-
-### 3. Determine required facts and record support
-Separate:
-- record-supported facts supplied by the user;
-- procedural facts that require docket verification;
-- legal propositions;
-- missing facts.
-
-Do not convert allegations into established facts unless the posture permits it.
-
-### 4. Choose structure
-Unless a specialized rule requires another format, use only the sections needed:
-1. caption;
-2. title identifying the relief;
-3. appearance/opening;
-4. relevant procedural background;
-5. relevant facts;
-6. applicable law/standard;
-7. argument/application;
-8. requested relief;
-9. signature/certificate sections if requested and factually supported.
-
-### 5. Draft the argument
-Use a rule → application → conclusion structure.
-- Lead with the requested legal result.
-- State the governing standard accurately.
-- Apply the rule to the supplied record.
-- Address the strongest foreseeable counterargument when appropriate.
-- Avoid adjectives and rhetoric that do not advance the legal analysis.
-
-### 6. Citation discipline
-Route citation questions to `pr-legal-citation`.
-For every authority:
-- verify existence;
-- verify current validity;
-- verify that it supports the proposition;
-- distinguish binding from persuasive authority;
-- do not fabricate pinpoint cites.
-
-### 7. Drafting quality
-Use:
-- clear headings;
-- short paragraphs;
-- professional and respectful tone;
-- active voice where natural;
-- precise descriptions of requested relief;
-- consistent party labels;
-- correct cross-references.
-
-### 8. Filing-readiness audit
-Before delivery check:
-- requested relief is explicit;
-- procedural vehicle matches the relief;
-- cited authority exists;
-- deadlines or jurisdictional assertions are verified;
-- factual assertions have a supplied or identified source;
-- exhibits mentioned actually exist or are marked as placeholders;
-- specialized rule requirements have been satisfied;
-- no confidential template facts leaked into the new matter.
-
-## Template/example rule
-
-Prior motions may be used to learn formatting, section order, tone, and recurring drafting conventions.
-
-Never:
-- copy names, case numbers, addresses, facts, medical information, financial information, or other matter-specific data from a template;
-- treat a prior motion as legal authority;
-- assume an old template reflects current law;
-- silently transplant arguments from a different procedural posture.
-
-## Relationship to specialized skills
-
-Use this skill as the drafting engine. A specialized substantive/procedural skill supplies the controlling legal workflow.
-
-Examples:
-- summary judgment → `pr-summary-judgment-motion` + this drafting framework;
-- legal research → `pr-legal-research`;
-- citation checking → `pr-legal-citation`.
-
-## Output contract
-
-The motion must:
-1. identify the requested relief;
-2. distinguish facts from legal argument;
-3. rely only on supplied/verified record facts;
-4. contain no invented authority;
-5. flag missing filing-specific information;
-6. follow any specialized procedural requirements;
-7. comply with `pr/CLAUDE.md`.
-
-If the user asks for a finished filing, provide the filing rather than a generic explanation, while preserving conspicuous placeholders for missing matter-specific information.
+Cumplir con `pr/CLAUDE.md` y añadir su descargo obligatorio.
