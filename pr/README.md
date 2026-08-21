@@ -137,3 +137,8 @@ Para añadir una nueva área de práctica o un skill, consulte [`CONTRIBUTING.md
 ## Práctica federal en Puerto Rico
 
 Se añadieron 17 skills originales para jurisdicción y litigación civil federal, procedimiento penal y sentencing, evidencia federal, quiebras, apelaciones ante el Primer Circuito y ética de práctica federal. Cada workflow exige reglas y fuentes oficiales vigentes, distingue Derecho federal de Derecho de Puerto Rico y mantiene revisión por abogado.
+
+
+### Quiebras: expansión operativa
+
+Doce skills adicionales cubren intake, selección de capítulo, caudal, claims, relief from stay, dischargeability, contratos, avoidance, planes de Capítulo 11, adversary proceedings, términos y financiación.
