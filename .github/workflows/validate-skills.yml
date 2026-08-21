@@ -1,0 +1,39 @@
+name: Validate skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate public skill files
+        shell: python
+        run: |
+          from pathlib import Path
+
+          files = sorted(Path("pr").glob("**/SKILL.md"))
+          assert files, "No SKILL.md files found"
+          failures = []
+          for path in files:
+              text = path.read_text(encoding="utf-8")
+              if not text.startswith("---\n"):
+                  failures.append(f"{path}: missing YAML frontmatter")
+              if "\nname:" not in text or "\ndescription:" not in text:
+                  failures.append(f"{path}: missing name or description")
+              if len(text.strip()) < 200:
+                  failures.append(f"{path}: unexpectedly short")
+          if failures:
+              raise SystemExit("\n".join(failures))
+          print(f"Validated {len(files)} skills")
