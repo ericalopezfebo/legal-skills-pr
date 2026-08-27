@@ -1,205 +1,139 @@
 # Perfiles de formato para mociones de Puerto Rico
 
-Este archivo complementa `SKILL.md`. Documenta convenciones visuales observadas en las muestras suministradas y las separa de requisitos oficiales del foro.
+Este archivo separa requisitos oficiales de estilos attorney-authored. Cuando el usuario pida imitar una muestra concreta, la fidelidad a esa muestra controla salvo requisito oficial incompatible.
 
-## Regla de prioridad
+## `casp-calderon` — referencia “Asumir Representación”
 
-1. **Modelo, reglamento, orden o instrucciones oficiales vigentes del foro**.
-2. **Regla procesal aplicable**.
-3. **Muestra reciente del mismo foro**.
-4. **Muestra reciente de otro foro puertorriqueño**.
-5. **Estilo de oficina**.
+Perfil reconstruido de la moción attorney-authored utilizada como referencia.
 
-Una línea roja, fuente particular o diseño de epígrafe visto en una moción privada no se debe describir como requisito oficial sin autoridad independiente.
+### Página
+- Letter 8.5 × 11.
+- Times New Roman 12 pt como fuente base.
+- Cuerpo justificado.
+- Líneas rojas laterales en todas las páginas: izquierda doble y derecha sencilla.
+- Paginación centrada en pie; páginas posteriores pueden mostrar `- 2 -`, etc.
 
-## Perfil `pr-litigation-redline`
-
-Perfil de oficina reconstruido de las muestras DOCX recientes.
-
-| Propiedad | Valor observado / recomendado |
-|---|---|
-| Tamaño de papel | Letter (8.5 × 11) |
-| Margen izquierdo | 1.5 in |
-| Margen derecho | 0.5 in |
-| Margen superior | 0.625 in en muestras recientes |
-| Margen inferior | 0.3125 in en muestras recientes |
-| Línea izquierda | roja (`FF0000`), doble, 1.5 pt, separación 4 pt |
-| Línea derecha | roja (`FF0000`), sencilla, 1.5 pt, separación 4 pt |
-| Fuente principal | Times New Roman 12 pt |
-| Alternativa histórica observada | Book Antiqua 12 pt |
-| Cuerpo | justificado |
-| Título | centrado, negrita, mayúsculas |
-| Encabezado institucional | centrado, negrita, mayúsculas |
-| Paginación | centrada en pie, cuando corresponda |
-
-### Dato técnico de las muestras DOCX
-
-Los bordes rojos se implementan como **page borders de la sección**, no como líneas dibujadas manualmente:
-
-```xml
-<w:pgBorders>
-  <w:left w:val="double" w:sz="12" w:space="4" w:color="FF0000"/>
-  <w:right w:val="single" w:sz="12" w:space="4" w:color="FF0000"/>
-</w:pgBorders>
-```
-
-`motion_docx.py` reproduce este comportamiento mediante WordprocessingML.
-
-## Epígrafe
-
-Usar una tabla de dos columnas. Evitar crear el epígrafe con espacios o tabuladores.
-
-### Columna izquierda
-
-- parte principal en mayúsculas y negrita;
-- designación procesal debajo;
-- `v.` entre las partes;
-- contraparte y su designación.
-
-### Columna derecha
-
-- `Caso Núm.` o `Civil Núm.`;
-- sala, cuando corresponda;
-- `SOBRE:`;
-- naturaleza del procedimiento.
-
-### Bordes observados
-
-En las muestras recientes:
-
-- sin marco exterior completo;
-- división central doble;
-- borde inferior doble en la celda izquierda en algunos modelos;
-- evitar bordes decorativos si el foro usa otro modelo oficial.
-
-## CASP
-
-Convenciones observadas y consistentes con el modelo aportado:
+### Encabezado
+Tres líneas centradas, mayúsculas:
 
 ```text
 GOBIERNO DE PUERTO RICO
 COMISIÓN APELATIVA DEL SERVICIO PÚBLICO
-
-[EPÍGRAFE]
-
-MOCIÓN ...
-
-A LA HONORABLE COMISIÓN:
-```
-
-Designaciones usuales: `Promovente` / `Promovido`.
-
-Cierre frecuente:
-
-```text
-POR TODO LO CUAL, ...
-RESPETUOSAMENTE SOMETIDO.
-CERTIFICO: ...
-En San Juan, Puerto Rico, a [FECHA].
-[FIRMA / RUA / CONTACTO]
-```
-
-El orden entre certificación, `RESPETUOSAMENTE SOMETIDO` y fecha varía entre muestras. Si existe un modelo oficial aplicable, seguirlo.
-
-## Junta de Apelaciones de AEP
-
-Convenciones observadas:
-
-```text
-AUTORIDAD DE EDIFICIOS PÚBLICOS
-JUNTA DE APELACIONES
 SAN JUAN, PUERTO RICO
-
-[EPÍGRAFE]
-
-MOCIÓN ...
-
-A LA HONORABLE JUNTA:
 ```
 
-Designaciones usuales: `Apelante` / `Apelada`.
+### Epígrafe
+Tabla de dos columnas.
 
-## Tribunal de Primera Instancia
-
-Convenciones observadas:
-
+Izquierda, centrada:
 ```text
-ESTADO LIBRE ASOCIADO DE PUERTO RICO
-TRIBUNAL DE PRIMERA INSTANCIA
-SALA [SUPERIOR] DE [MUNICIPIO]
+[NOMBRE APELANTE]
+Apelante
 
-[EPÍGRAFE CON CIVIL NÚM., SALA Y SOBRE]
+v.
 
-MOCIÓN ...
-
-AL HONORABLE TRIBUNAL:
+[NOMBRE APELADO]
+(SIGLAS)
+Apelado
 ```
 
-En SUMAC, no copiar al documento generado las leyendas automáticas de `Entrada Núm.`, fecha/hora o `Página X de Y` que aparecen en PDFs ya radicados. Esas marcas son producto del sistema, no parte de la moción original.
+Derecha:
+```text
+Caso Núm. [NÚMERO]
 
-## Mayúsculas y negritas
+SOBRE:
 
-Aplicar negrita a los elementos de navegación y fórmulas clave, no al cuerpo completo:
+[MATERIA]
+```
 
-- encabezado institucional;
-- partes principales del epígrafe;
-- título;
-- saludo al foro;
-- encabezados de sección;
-- `COMPARECE`, cuando se quiera enfatizar la fórmula de comparecencia;
-- `POR TODO LO CUAL` / `POR LO EXPUESTO`;
-- `SÚPLICA`;
-- `CERTIFICO`;
-- `RESPETUOSAMENTE SOMETIDO/A`.
+No cambiar a `Parte Apelante`, `Parte Apelada` ni `CASO NÚM.` cuando se solicite fidelidad a esta muestra.
 
-No alterar el contenido jurídico solo para forzar un patrón visual.
+### Título
+Centrado, MAYÚSCULAS, **negrita y subrayado**.
 
-## Vocabulario reusable
+### Saludo
+Usar exactamente, salvo cambio requerido por el caso:
+
+`A LA HONORABLE COMISIÓN U COMISIONADA ASOCIADA`
+
+No reemplazar automáticamente por `A LA HONORABLE COMISIÓN:`.
 
 ### Comparecencia
+Patrón preferido:
 
-Patrones aceptables, ajustados a número y género:
+`COMPARECE LA PARTE APELADA, [SIGLAS], por conducto del abogado que suscribe, y muy respetuosamente expone y solicita lo siguiente:`
 
-- `COMPARECE la Parte Promovida, [PARTE], por conducto del abogado que suscribe, y muy respetuosamente EXPONE, ALEGA Y SOLICITA:`
-- `Comparece la parte apelada por conducto de la representación legal que suscribe y ante esta Honorable Junta muy respetuosamente expone, alega y solicita:`
-- `COMPARECEN las partes ..., representadas por sus respectivas representaciones legales, y muy respetuosamente EXPONEN, ALEGAN Y SOLICITAN:`
+- `COMPARECE LA PARTE APELADA` en mayúsculas.
+- siglas de la parte en negrita según la muestra.
+- no convertir `expone y solicita` a `EXPONE Y SOLICITA` si se está imitando estrictamente el documento.
 
-### Petición
+### Párrafos
+Numerados, concisos y con estructura `Que ...`.
+No añadir párrafos explicativos no pedidos.
 
-- `POR TODO LO CUAL, se solicita respetuosamente ...`
-- `POR LO EXPUESTO, se solicita ...`
-- `EN MÉRITO DE LO ANTERIOR, se solicita ...`
+Para asunción de representación, la muestra usa funcionalmente:
+1. asunción de representación;
+2. solicitud de copia del expediente de récord;
+3. solicitud de envío digital a email;
+4. solicitud de término para recuperar información/cumplir órdenes, si ese remedio fue pedido y está sustentado.
 
-### Remedios frecuentes
+**No convertir esta lista en requisitos universales:** solo incluir cada punto cuando aplique al caso.
 
-- `tome conocimiento de lo expuesto`;
-- `dé por cumplida la Orden`;
-- `declare HA LUGAR la presente moción`;
-- `declare NO HA LUGAR la solicitud ...`;
-- `continúe con los procedimientos conforme a derecho`;
-- `emita cualquier otro remedio que en derecho proceda`.
+### Énfasis inline observado
+Aplicar negrita selectiva a términos funcionales, no al párrafo completo. Ejemplos de la muestra:
+- siglas de la parte;
+- `copia del expediente`;
+- email;
+- cantidad de días;
+- `POR TODO LO CUAL`;
+- `CON LUGAR`;
+- `RESPETUOSAMENTE SOMETIDO.`;
+- `CERTIFICO:`.
 
-## Errores que no se deben aprender de las muestras
+### Súplica
+Mismo párrafo, justificado:
 
-- texto de borrador con alternativas sin resolver;
-- nombres de agencias pegados o incorrectos;
-- inconsistencias entre `promovida`, `apelada` y `demandada`;
-- errores tipográficos;
-- citas incompletas;
-- datos personales de otros asuntos;
-- fecha en blanco si el usuario ya suministró la fecha;
-- afirmaciones de notificación no verificadas.
+`POR TODO LO CUAL, se solicita de esta Honorable Comisión declare CON LUGAR la presente moción, [remedios concretos].`
 
-## Validación visual mínima
+No sustituir por una súplica genérica de “tome conocimiento” cuando la muestra pide que se declare CON LUGAR y se autorice la representación.
 
-Antes de considerar listo el DOCX:
+### Cierre y firma
+Orden:
+1. `RESPETUOSAMENTE SOMETIDO.`
+2. `En San Juan, Puerto Rico, a [fecha].`
+3. espacio de firma;
+4. nombre del abogado en mayúsculas;
+5. RUA;
+6. dirección;
+7. teléfono;
+8. email.
 
-- el epígrafe no se desborda;
-- el número de caso y `SOBRE` quedan en la columna derecha;
-- el título está centrado;
-- no existen dobles espacios usados para alinear;
-- las líneas laterales, si se activaron, aparecen en todas las páginas;
-- las mayúsculas/negritas son consistentes;
-- ningún dato de una muestra anterior permanece en el documento;
-- el bloque de firma no queda aislado de forma absurda en una página nueva;
-- las páginas siguientes mantienen legibilidad y numeración.
+### Certificado de notificación
+Después del bloque principal:
+
+`CERTIFICADO DE NOTIFICACIÓN` — centrado, bold, underline.
+
+Texto:
+`CERTIFICO: haber enviado copia del presente escrito a [destinatario], mediante [medio real] ...`
+
+No afirmar destinatario, email o método si no están confirmados.
+
+## `pr-litigation-redline`
+Perfil general observado: Letter, Times New Roman 12 pt, margen izquierdo amplio, líneas laterales rojas y cuerpo justificado. Usarlo cuando el usuario quiera el estilo de oficina pero no haya pedido fidelidad a una muestra concreta.
+
+## `official-neutral`
+Usar modelo/reglas oficiales del foro y no imponer líneas rojas ni convenciones privadas.
+
+## Regla de comparación visual
+Cuando exista archivo de referencia, no basta con que el texto “se parezca”. Comparar:
+- número de líneas del encabezado;
+- ancho y alineación del epígrafe;
+- capitalización de labels;
+- título bold/underline;
+- saludo exacto;
+- indentación de numeración;
+- densidad y longitud de párrafos;
+- ubicación de súplica;
+- orden cierre-fecha-firma-certificado;
+- bold inline;
+- bordes laterales y paginación.
