@@ -1,11 +1,11 @@
 ---
 name: pr-motion-drafting
 title: Puerto Rico Motion Drafting Engine
-description: Redacta mociones para Puerto Rico y, cuando se usa el perfil CASP de oficina, reproduce la arquitectura, vocabulario y formato del modelo attorney-authored de referencia sin añadir hechos o formalidades no presentes.
+description: Redacta mociones para Puerto Rico y reproduce perfiles attorney-authored cuando existe una muestra canónica, priorizando fidelidad de arquitectura, vocabulario y formato sobre paráfrasis genéricas de IA.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
-version: 1.1.0
+version: 1.2.0
 execution_mode: open
 jurisdiction: pr
 practice: litigation
@@ -15,18 +15,29 @@ language: es
 # Puerto Rico Motion Drafting Engine
 
 ## Regla principal
-Cuando el usuario provea una moción de referencia hecha por el abogado y pida que el resultado quede como esa muestra, **la muestra attorney-authored controla el estilo, orden, vocabulario y densidad del escrito**, salvo requisito jurídico u orden oficial incompatible. No “mejorar” el estilo sustituyéndolo por lenguaje genérico de IA.
+Cuando exista una muestra attorney-authored canónica para el mismo foro y tipo de moción, **la muestra controla estructura, voz, densidad, fórmulas y orden**, salvo requisito oficial incompatible. El agente NO debe “mejorar”, modernizar, ampliar ni parafrasear innecesariamente el modelo.
 
 Aprender formato y voz; nunca copiar hechos de otro caso.
 
 ## Jerarquía
 1. requisito oficial vigente del foro;
 2. instrucción expresa del usuario;
-3. muestra attorney-authored identificada para ese abogado/foro/tipo de moción;
-4. otras muestras recientes del mismo foro;
-5. estilo neutral.
+3. plantilla attorney-authored canónica del mismo foro/tipo;
+4. otras muestras attorney-authored del mismo abogado/foro;
+5. otras muestras recientes del foro;
+6. estilo neutral.
 
-## Perfiles
+## Selección obligatoria de perfil
+Antes de redactar, determinar `forum_profile`, `motion_type` y `attorney_style`.
+
+**Regla automática:** si `forum_profile = casp` y `motion_type = asumir representación` (incluyendo variantes como “asumiendo nueva representación”), usar por defecto `attorney_style = calderon` y `visual_profile = casp-calderon`, salvo que el usuario pida expresamente otro estilo o exista un modelo oficial obligatorio incompatible.
+
+Para ese supuesto, **leer y seguir obligatoriamente**:
+`references/casp-calderon-asumir-representacion.md`
+
+No basta con conocer las reglas generales de este SKILL.md. La referencia canónica contiene el texto-esqueleto que debe gobernar la salida.
+
+## Perfiles generales
 - `tpi`
 - `casp`
 - `aep-ja`
@@ -37,78 +48,64 @@ Aprender formato y voz; nunca copiar hechos de otro caso.
 Visuales:
 - `official-neutral`
 - `pr-litigation-redline`
-- `casp-calderon` — perfil de fidelidad al modelo attorney-authored “Asumir Representación”.
+- `casp-calderon`
 
-## CASP — perfil `casp-calderon`
-Usar este perfil cuando el usuario pida el formato del Lcdo. Víctor Calderón o una moción “como Asumir Representación”.
+## CASP / Calderón — regla de fidelidad estricta
+Para una moción asumiendo representación ante CASP:
 
-### Arquitectura exacta preferida
-1. `GOBIERNO DE PUERTO RICO`
-2. `COMISIÓN APELATIVA DEL SERVICIO PÚBLICO`
-3. `SAN JUAN, PUERTO RICO`
-4. epígrafe de dos columnas;
-5. título centrado, mayúsculas, negrita y subrayado;
-6. saludo: `A LA HONORABLE COMISIÓN U COMISIONADA ASOCIADA`
-7. comparecencia: `COMPARECE LA PARTE [APELADA/APELANTE], [SIGLAS], por conducto del abogado que suscribe, y muy respetuosamente expone y solicita lo siguiente:`
-8. párrafos numerados, directos, iniciados con `Que ...` cuando corresponda;
-9. súplica en el mismo párrafo iniciada por `POR TODO LO CUAL,`;
-10. `RESPETUOSAMENTE SOMETIDO.`
-11. `En San Juan, Puerto Rico, a [fecha].`
-12. bloque de firma/datos;
-13. encabezado centrado, negrita y subrayado `CERTIFICADO DE NOTIFICACIÓN`;
-14. certificación en página siguiente cuando el flujo del modelo así resulte: `CERTIFICO: haber enviado copia del presente escrito ...`;
-15. firma/nombre al final de la certificación.
+1. cargar `references/casp-calderon-asumir-representacion.md`;
+2. usar sus cuatro párrafos canónicos como skeleton;
+3. sustituir solo datos variables y hacer únicamente las adaptaciones mínimas exigidas por los hechos suministrados;
+4. mantener la súplica canónica salvo que el usuario pida un remedio adicional indispensable;
+5. mantener el orden del cierre y certificado;
+6. ejecutar el quality gate antes de entregar.
 
-### Epígrafe CASP Calderón
-- izquierda centrada: nombre de apelante, `Apelante`, `v.`, contraparte, siglas cuando existan, `Apelado/Apelada`;
-- derecha: `Caso Núm. [número]`, luego `SOBRE:`, luego materia centrada;
-- división vertical central negra; borde inferior en el bloque izquierdo según el modelo;
-- no anteponer `Parte` a `Apelante`/`Apelado` si la muestra no lo hace;
-- `Caso Núm.` en capitalización normal, no `CASO NÚM.`.
+### Elementos obligatorios
+- `GOBIERNO DE PUERTO RICO`
+- `COMISIÓN APELATIVA DEL SERVICIO PÚBLICO`
+- `SAN JUAN, PUERTO RICO`
+- roles `Apelante` / `Apelado(a)` sin anteponer `Parte` en el epígrafe;
+- `Caso Núm.` en capitalización normal;
+- título exacto por defecto: `MOCIÓN ASUMIENDO NUEVA REPRESENTACIÓN`;
+- título centrado + bold + underline;
+- saludo exacto: `A LA HONORABLE COMISIÓN U COMISIONADA ASOCIADA`;
+- comparecencia con `abogado que suscribe`;
+- párrafos numerados iniciados con `Que`;
+- súplica con `declare CON LUGAR`, `autorice nuestra representación legal` y futuras notificaciones a dirección de récord;
+- `RESPETUOSAMENTE SOMETIDO.` antes de fecha/firma;
+- `CERTIFICADO DE NOTIFICACIÓN` después del bloque principal.
 
-### Voz y vocabulario
-Para este perfil, preservar las fórmulas de la muestra aunque exista una alternativa más moderna:
-- `abogado que suscribe`, no sustituir automáticamente por `representación legal que suscribe`;
-- `Que el abogado que suscribe asume ...`;
-- `se solicita copia del expediente de récord`;
-- `de tener el expediente digital`;
-- `se solicita un término de [X] días`;
-- `para poder cumplir con todas las ordenes emitidas, de haber alguna` cuando los hechos lo sostengan;
-- `declare CON LUGAR la presente moción`;
-- `autorice nuestra representación legal`;
-- `en lo sucesivo envíen a nuestra dirección de récord toda notificación futura`.
+### Prohibiciones específicas
+Cuando se usa la plantilla canónica, NO:
+- cambiar `Apelante` por `Parte Apelante`;
+- cambiar `Apelado` por `Parte Apelada` en el epígrafe;
+- usar `CASO NÚM.`;
+- añadir `LEGAL` al título;
+- acortar el saludo a `A LA HONORABLE COMISIÓN:`;
+- sustituir `abogado que suscribe` por `representación legal que suscribe`;
+- añadir RUA al primer párrafo si el modelo lo coloca en firma;
+- explicar que el expediente es necesario “para ejercer cabalmente” la representación;
+- crear un quinto párrafo solo para la dirección de récord;
+- convertir la súplica en una lista `(a)-(d)`;
+- sustituir `declare CON LUGAR` por `tome conocimiento`;
+- colocar `CERTIFICO` antes de `RESPETUOSAMENTE SOMETIDO`;
+- añadir hechos sobre abogado anterior, anejos, sustitución, cesación o estado procesal no suministrado.
 
-No introducir lenguaje que el abogado no utilizó solo porque parezca más formal.
+Si el borrador contiene cualquiera de esos cambios sin instrucción expresa, **falla el perfil y debe regenerarse antes de entregarse**.
 
 ## Regla anti-alucinación para mociones breves
-**No agregar párrafos jurídicamente plausibles que no estén sustentados por la instrucción o el récord.**
+No agregar contenido jurídicamente plausible que no esté sustentado por instrucciones, récord o plantilla aplicable. Si un dato indispensable falta, usar `[POR COMPLETAR]`; si no es indispensable, omitirlo.
 
-En una moción asumiendo representación NO añadir por defecto:
-- que se sustituye a un abogado anterior;
-- nombre del abogado anterior;
-- que el abogado anterior “cesa su intervención”;
-- que no hay anejos;
-- método/dirección de notificación aún desconocidos;
-- explicaciones sobre la naturaleza de la comparecencia;
-- hechos procesales no suministrados.
+## Otros tipos de moción
+Para mociones sin plantilla canónica, construir primero un `motion skeleton` a partir de la mejor muestra attorney-authored disponible:
+- número y función de párrafos;
+- apertura y cierre;
+- orden de certificación/firma;
+- densidad;
+- vocabulario;
+- énfasis tipográfico.
 
-Si el dato es indispensable, usar `[POR COMPLETAR]`; si no es indispensable para el patrón solicitado, **omitirlo**.
-
-## Regla de fidelidad de contenido
-Cuando exista una muestra attorney-authored comparable, hacer primero un `motion skeleton` de la muestra:
-- número de párrafos;
-- función de cada párrafo;
-- fórmulas de apertura/cierre;
-- orden de certificación y firma;
-- nivel de detalle;
-- términos enfatizados.
-
-Redactar el nuevo escrito sobre ese skeleton. No reemplazarlo con una plantilla genérica.
-
-## Tipos de moción
-Entre otros: asumir/relevar representación, prórroga, cumplimiento de orden, mostrar causa, informativa, solicitud de orden/vista, cambio de señalamiento, oposición, réplica, reconsideración, desestimación, resolución/sentencia sumaria y descubrimiento.
-
-Para una moción breve, no añadir secciones doctrinales. Para una moción sustantiva, usar solo las secciones que realmente ayuden (`HECHOS`, `TRÁCTO PROCESAL`, `DERECHO`, `APLICACIÓN`, `SÚPLICA`).
+No imponer secciones doctrinales a mociones breves. En mociones sustantivas usar solo las secciones necesarias (`HECHOS`, `TRÁCTO PROCESAL`, `DERECHO`, `APLICACIÓN`, `SÚPLICA`).
 
 ## Formato visual
 Consultar `FORMAT_PROFILES.md`. Para `casp-calderon`:
@@ -117,37 +114,43 @@ Consultar `FORMAT_PROFILES.md`. Para `casp-calderon`:
 - líneas laterales rojas en todas las páginas: izquierda doble, derecha sencilla;
 - cuerpo justificado;
 - título centrado + bold + underline;
-- términos seleccionados dentro del cuerpo en bold según la muestra (p. ej. siglas de la parte, `copia del expediente`, email, número de días, `POR TODO LO CUAL`, `CON LUGAR`, `RESPETUOSAMENTE SOMETIDO`, `CERTIFICO`);
-- encabezado `CERTIFICADO DE NOTIFICACIÓN` centrado + bold + underline;
-- número de página centrado en pie con guiones en páginas subsiguientes según el modelo.
+- `CERTIFICADO DE NOTIFICACIÓN` centrado + bold + underline;
+- énfasis selectivo consistente con la muestra;
+- paginación centrada con guiones cuando corresponda.
+
+Cuando se solicite DOCX y el entorno permita ejecutar el renderer, usar `motion_docx.py`. Si el agente genera el DOCX por otro mecanismo, debe reproducir igualmente el perfil y no degradarlo a un documento genérico.
 
 ## Algoritmo
-1. Identificar foro, tipo de moción y si existe muestra attorney-authored aplicable.
-2. Extraer skeleton de la muestra antes de redactar.
-3. Separar hechos confirmados de datos faltantes.
-4. Eliminar cualquier párrafo “útil” que no aparezca en el skeleton ni sea necesario por el caso.
-5. Redactar con la voz de la muestra, manteniendo su nivel de concisión.
-6. Construir una súplica que replique la forma de remedio del modelo cuando sea jurídicamente congruente.
-7. Certificar únicamente hechos reales de notificación.
-8. Renderizar con `motion_docx.py` y el perfil visual correspondiente.
-9. Comparar visualmente contra la muestra: encabezado, caption, título, saludo, indentación, espaciado, bold/underline, bordes, firma, certificado y paginación.
-10. Revisar que no quede ningún dato de otro asunto.
+1. Clasificar foro, motion_type y estilo attorney-authored.
+2. Activar automáticamente plantilla canónica cuando corresponda.
+3. Leer la referencia canónica completa antes de redactar.
+4. Separar datos variables de lenguaje fijo del modelo.
+5. Redactar sustituyendo datos, no reescribiendo el modelo desde cero.
+6. Eliminar cualquier ampliación no requerida.
+7. Aplicar formato visual.
+8. Comparar salida contra la checklist del perfil.
+9. Si falla un elemento obligatorio o incurre en una prohibición, corregir/regenerar.
+10. Entregar solo después de pasar el quality gate.
 
-## Quality gate específico para “Asumiendo Nueva Representación” CASP
-Antes de entregar, confirmar:
-- ¿dice `SAN JUAN, PUERTO RICO` bajo el encabezado?
-- ¿roles dicen `Apelante` / `Apelado(a)` sin `Parte`, si se está imitando la muestra?
+## Quality gate CASP / Asumiendo Representación
+La salida NO está lista hasta que todas sean `sí`:
+- ¿incluye `SAN JUAN, PUERTO RICO`?
+- ¿epígrafe usa `Apelante/Apelado(a)` sin `Parte`?
 - ¿usa `Caso Núm.`?
+- ¿título es `MOCIÓN ASUMIENDO NUEVA REPRESENTACIÓN` sin `LEGAL` salvo instrucción?
 - ¿título está subrayado además de negrita?
-- ¿saludo dice `A LA HONORABLE COMISIÓN U COMISIONADA ASOCIADA`?
+- ¿saludo exacto dice `A LA HONORABLE COMISIÓN U COMISIONADA ASOCIADA`?
 - ¿comparecencia usa `abogado que suscribe`?
-- ¿los párrafos comienzan con `Que` siguiendo el modelo?
-- ¿no se inventó sustitución de abogado, ausencia de anejos u otro hecho?
-- ¿`POR TODO LO CUAL` pide `CON LUGAR`, autorización y notificaciones futuras cuando corresponda?
-- ¿`RESPETUOSAMENTE SOMETIDO.` aparece antes de lugar/fecha y firma?
-- ¿el `CERTIFICADO DE NOTIFICACIÓN` aparece después del bloque principal, como en el modelo?
+- ¿cuerpo conserva cuatro párrafos canónicos salvo necesidad real?
+- ¿párrafos comienzan con `Que`?
+- ¿no hay quinto párrafo redundante con dirección?
+- ¿súplica usa `declare CON LUGAR` y `autorice nuestra representación legal`?
+- ¿súplica no fue convertida en lista de subincisos?
+- ¿`RESPETUOSAMENTE SOMETIDO.` precede fecha/firma?
+- ¿certificado aparece después del bloque principal?
+- ¿no se inventó ningún hecho procesal?
 
-Si alguna respuesta es no, corregir antes de entregar.
+Si cualquiera es `no`, no entregar todavía.
 
 ## Salida
-Cuando se solicite Word, generar `.docx`; no limitarse a describir el formato. Toda moción requiere revisión final del abogado antes de presentación.
+Cuando se solicite Word, generar `.docx`; no limitarse a describir formato. Toda moción requiere revisión final del abogado antes de presentación.
