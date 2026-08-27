@@ -35,6 +35,7 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 | [`pr-discovery-response`](litigation/skills/pr-discovery-response/) | Redacta contestaciones a descubrimiento y objeciones de buena fe |
 | [`pr-doctrine-to-facts`](litigation/skills/pr-doctrine-to-facts/) | Conecta las autoridades ya citadas en un borrador con los hechos específicos del caso |
 | [`pr-deposition-preparation`](litigation/skills/pr-deposition-preparation/) | Prepara deposiciones con módulos, exhibits y límites éticos |
+| [`pr-cross-examination`](litigation/skills/pr-cross-examination/) | Prepara contrainterrogatorios para Puerto Rico con objetivos factuales, preguntas sugestivas de un hecho, matrices de inconsistencias, impugnación y mapa de exhibits |
 | [`pr-legal-hold`](litigation/skills/pr-legal-hold/) | Diseña avisos y seguimiento de preservación |
 | [`pr-esi-protocol`](litigation/skills/pr-esi-protocol/) | Negocia protocolos de información electrónica |
 
@@ -121,6 +122,7 @@ Skills para la práctica jurídica bajo el Derecho de Puerto Rico. Consulte [`CL
 - **Moción:** skill procesal especializado, por ejemplo `pr-motion-dismiss` o `pr-summary-judgment-motion` → `pr-motion-drafting` → `pr-doctrine-to-facts` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Informe pretrial o de vista:** `pr-legal-document-sanitization` si se usan modelos → `pr-pretrial-report-drafting` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Controversia de descubrimiento:** `pr-discovery-response` → `pr-motion-compel-discovery` → `pr-filing-readiness`
+- **Preparación de testigo adverso:** `pr-deposition-preparation` cuando proceda → `pr-cross-examination` → `pr-citation-verifier` para autoridades jurídicas
 - **Reconsideración:** `pr-civil-deadlines` → `pr-reconsideration-motion` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Apelación:** `pr-appellate-drafting` → `pr-legal-citation` → `pr-citation-verifier` → `pr-filing-readiness`
 - **Contrato:** `pr-contract-drafting` → `pr-contract-review` → `pr-citation-verifier` cuando se incluyan autoridades jurídicas
