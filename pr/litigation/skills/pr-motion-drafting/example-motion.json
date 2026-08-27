@@ -1,0 +1,29 @@
+{
+  "forum_profile": "casp",
+  "visual_profile": "pr-litigation-redline",
+  "case_number": "SA-00-000000",
+  "matter": "[ASUNTO]",
+  "title": "Moción en cumplimiento de orden",
+  "parties": {
+    "left": [
+      {"name": "[PARTE PROMOVENTE]", "role": "Promovente"},
+      {"name": "[PARTE PROMOVIDA]", "role": "Promovida"}
+    ]
+  },
+  "appearance": "COMPARECE la Parte Promovida, por conducto del abogado que suscribe, y muy respetuosamente EXPONE, ALEGA Y SOLICITA:",
+  "body": [
+    "1. Que el [FECHA] esta Honorable Comisión emitió una Orden mediante la cual [MANDATO].",
+    "2. Que mediante el presente escrito se informa el cumplimiento de dicha Orden conforme surge de [ANEJO/FUENTE]."
+  ],
+  "prayer": "POR TODO LO CUAL, se solicita respetuosamente que esta Honorable Comisión tome conocimiento de lo expuesto y dé por cumplida la Orden.",
+  "certification": "CERTIFICO: [MÉTODO REAL DE NOTIFICACIÓN Y DESTINATARIOS].",
+  "place_date": "En San Juan, Puerto Rico, a [FECHA].",
+  "signature": {
+    "firm": "[FIRMA/OFICINA]",
+    "name": "[ABOGADO/A]",
+    "rua": "RUA [NÚM.]",
+    "address": "[DIRECCIÓN]",
+    "phone": "[TELÉFONO]",
+    "email": "[EMAIL]"
+  }
+}
