@@ -1,11 +1,11 @@
 ---
 name: pr-civil-deadlines
 title: Puerto Rico Civil Litigation Deadlines
-description: Calculates and audits Puerto Rico civil litigation deadlines from verified triggering events, current rules, statutes, court orders, and applicable computation-of-time provisions, while flagging jurisdictional or non-extendable terms.
+description: Calcula y audita términos de litigación civil en Puerto Rico desde eventos activadores y fuentes verificadas, y produce un plan de docketing con recordatorios internos y controles redundantes sin confundirlos con el término jurídico.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
-version: 0.1.0
+version: 0.2.0
 execution_mode: open
 jurisdiction: pr
 practice: litigation
@@ -14,54 +14,89 @@ language: es
 
 # Puerto Rico Civil Litigation Deadlines
 
-## Purpose
-Calculate procedural dates only from verified sources and facts. This skill is a deadline-audit engine, not a memory-based calendar.
+## Propósito
 
-## Required inputs
-- forum and case type;
-- triggering event;
-- exact triggering date and, when relevant, date/method of service or notice;
-- governing rule/statute/order if known;
-- any prior extensions, stays, amended orders, or special procedures;
-- target filing or act.
+Calcular términos únicamente desde fuentes y hechos verificados y convertir el resultado en un plan operativo de seguimiento. Este skill no es un calendario basado en memoria.
 
-## Workflow
-1. Confirm that Puerto Rico Commonwealth civil procedure governs. If the forum is federal, appellate, administrative, criminal, bankruptcy, or another special forum, stop or route to the appropriate rules.
-2. Identify the legal source creating the term: Rules of Civil Procedure, statute, special law, court order, scheduling order, or another controlling source.
-3. Verify the current text and effective version of that source before calculating.
-4. Identify the triggering event precisely. Distinguish filing, entry, notice, service, personal service, electronic notice, mailing, hearing date, and judgment date.
-5. Apply the current Puerto Rico computation-of-time rule, including weekends, legal holidays, and any source-specific treatment. Do not add days for method of service unless current law actually requires it.
-6. Check for amendments, extensions, stays, court orders, special proceedings, and jurisdictional/non-extendable terms.
-7. Produce the calculation transparently: source; trigger; trigger date; interval; computation rule; adjustments; resulting date.
-8. State confidence and unresolved assumptions. If any fact or legal source is missing, give a conditional calculation rather than pretending certainty.
+## Entradas requeridas
 
-## High-risk deadlines
-Treat post-judgment, reconsideration, appeal/review, certiorari, removal/remand, jurisdictional, statutory, and special-proceeding terms as high risk. Require current-law verification before the user relies on the date.
+- foro y tipo de caso;
+- evento activador;
+- fecha exacta y, cuando importe, método/fecha de notificación o emplazamiento;
+- regla, estatuto u orden aplicable si se conoce;
+- prórrogas, stays, órdenes modificadas o procedimiento especial;
+- acto o presentación objetivo.
+
+## Workflow jurídico
+
+1. Confirmar que gobierna procedimiento civil de Puerto Rico. Si es federal, apelativo, administrativo, penal, quiebra u otro régimen especial, detener o enrutar.
+2. Identificar la fuente jurídica que crea el término.
+3. Verificar texto vigente y versión aplicable antes de calcular.
+4. Identificar precisamente el evento activador; distinguir presentación, entrada, archivo, notificación, servicio, emplazamiento, vista y sentencia.
+5. Aplicar la regla vigente de cómputo, incluidos fines de semana y feriados. No añadir días por método de notificación salvo autoridad vigente.
+6. Verificar enmiendas, prórrogas, stays, órdenes, procedimientos especiales y si el término es jurisdiccional o improrrogable.
+7. Mostrar cálculo transparente: fuente → evento → fecha → intervalo → regla de cómputo → ajustes → resultado.
+8. Expresar incertidumbre y alternativas cuando falte un hecho controlador.
+
+## Docketing defensivo
+
+Después de determinar la fecha jurídica, crear separadamente un **plan interno**. Nunca representar una fecha interna como término legal.
+
+- Registrar el término inmediatamente después de verificarlo.
+- Mantener una fuente maestra de calendario por asunto/equipo y evitar calendarios paralelos no sincronizados.
+- Para términos de alto riesgo, recomendar verificación independiente por una segunda persona o sistema.
+- Crear recordatorios escalonados antes del vencimiento según la complejidad del trabajo.
+- Dividir tareas extensas en hitos: investigación, primer borrador, revisión de cliente, exhibits, revisión de abogado, firma y presentación.
+- Programar revisión periódica de expedientes sin actividad para que ningún asunto quede sin próxima acción.
+- Cuando se espera un evento externo, fijar una fecha de seguimiento en lugar de dejar el expediente sin acción.
+- Conservar la fuente y el razonamiento del cómputo para que otra persona pueda reproducirlo.
+
+Los recordatorios internos son salvaguardas de gestión, no alteran ni extienden el término jurídico.
+
+## Términos de alto riesgo
+
+Tratar como alto riesgo: post-sentencia, reconsideración, apelación/revisión, certiorari, remoción/remand, prescripción/caducidad cuando corresponda, términos jurisdiccionales, estatutarios y procedimientos especiales. Requerir verificación actual antes de depender de la fecha.
 
 ## Guardrails
-- Never calculate a deadline solely from model memory.
-- Never assume that a court may extend a term.
-- Never assume that a timely motion tolls or interrupts another deadline without verifying the legal effect and compliance requirements.
-- Never infer a service date from a filing date.
-- If the record contains conflicting dates, show the alternatives and explain what fact controls.
-- Apply `pr/CLAUDE.md` and cite the verified rule/statute/order used.
 
-## Output contract
+- Nunca calcular exclusivamente de memoria.
+- Nunca asumir que un tribunal puede prorrogar un término.
+- Nunca asumir que una moción interrumpe otro término sin verificar efecto y cumplimiento.
+- Nunca inferir notificación de presentación.
+- Si el récord contiene fechas conflictivas, mostrar escenarios y explicar qué hecho controla.
+- No usar un artículo de práctica como autoridad para la duración del término.
+
+## Contrato de salida
+
 ```markdown
 # Cómputo de término — [acto]
 
+## Fecha jurídica
 - Foro: [foro]
-- Fuente del término: [regla/estatuto/orden verificada]
-- Evento que activa el término: [evento]
+- Fuente: [regla/estatuto/orden]
+- Evento activador: [evento]
 - Fecha activadora: [fecha]
 - Término: [duración]
-- Regla de cómputo aplicada: [fuente]
-- Ajustes: [fines de semana/feriados/orden/etc.]
+- Regla de cómputo: [fuente]
+- Ajustes: [feriados/orden/etc.]
 - Fecha resultante: **[fecha]**
-- Nivel de certeza: [alto/condicional/requiere verificación]
+- Nivel de certeza: [alto/condicional/verificar]
+
+## Plan interno de docketing
+| Hito interno | Fecha sugerida | Propósito |
+|---|---|---|
+| Verificación secundaria | [fecha] | Confirmar fuente y cálculo |
+| Investigación / documentos | [fecha] | Completar insumos |
+| Primer borrador | [fecha] | Evitar trabajo de última hora |
+| Revisión final | [fecha] | QA jurídico y factual |
+| Vencimiento jurídico | [fecha] | Término controlante |
 
 ## Advertencias
-[asunciones, posible término jurisdiccional, extensión, efecto de otra moción, etc.]
+[asunciones y riesgos]
 ```
 
-Close with the mandatory disclaimer from `pr/CLAUDE.md`.
+## Fuente metodológica
+
+Microjuris Puerto Rico, *5 consejos esenciales para que los abogados no pierdan una fecha límite*, utilizado únicamente para prácticas de gestión: calendario central, registro inmediato, recordatorios escalonados, hitos y revisión de asuntos inactivos. La duración y efecto de todo término se determina exclusivamente mediante autoridad jurídica vigente.
+
+Aplicar `pr/CLAUDE.md` y citar la regla, estatuto u orden verificada utilizada.
