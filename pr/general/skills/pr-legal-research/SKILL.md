@@ -1,11 +1,11 @@
 ---
 name: pr-legal-research
 title: Puerto Rico Legal Research Workflow
-description: Structures legal research on a Puerto Rico question — routes to the right primary source (LPRA statute, Tribunal Supremo/Tribunal de Apelaciones case law, agency regulation, or federal authority), tracks what was found vs. still needs verification, and produces a research memo with citations. Use when the user says "investiga esto en la ley de Puerto Rico", "busca jurisprudencia sobre...", "qué dice el estatuto sobre...", or asks a substantive question about PR law that requires checking sources rather than just drafting.
+description: Estructura investigación jurídica sobre Puerto Rico desde la definición del problema hasta la verificación de fuentes primarias, vigencia, tratamiento posterior y síntesis, con trazabilidad y controles éticos para investigación asistida por tecnología o IA.
 author: legal-skills-pr
 author_url: https://github.com/ericalopezfebo/legal-skills-pr
 license: MIT
-version: 0.1.0
+version: 0.2.0
 execution_mode: open
 jurisdiction: pr
 practice: general
@@ -14,29 +14,70 @@ language: es
 
 # Puerto Rico Legal Research Workflow
 
-## When to apply
+## Cuándo aplicar
 
-- The user asks a substantive question about Puerto Rico law and wants sourced authority, not just a drafted document.
-- The user needs to know whether a statute, rule, or agency regulation applies to a fact pattern.
-- The user wants a research memo they can attach to a file or hand to a supervising attorney.
-- **Out of scope:** giving a final legal opinion or advice — this produces a sourced research memo for attorney review, per the mandatory disclaimer in `pr/CLAUDE.md`.
+- El usuario solicita investigar Derecho de Puerto Rico con autoridad verificable.
+- Debe determinarse si una ley, regla, reglamento o precedente aplica a unos hechos.
+- Se necesita un memo de investigación para revisión de abogado.
+- Se utiliza IA, búsqueda web o plataforma jurídica para apoyar investigación y es necesario verificar el resultado.
 
-## Algorithm
+No sustituye el juicio profesional ni convierte una respuesta generada por IA en autoridad jurídica.
 
-1. **Frame the question.** Restate the legal issue as a precise question (parties, facts, forum, timeframe). If the forum matters (Commonwealth court vs. federal court vs. an administrative agency), identify it — it changes which rules and which citation conventions apply.
-2. **Route to the right source type**, in this order of priority per `pr/CLAUDE.md`:
-   - Constitutional text (federal or ELA) if a constitutional question is presented.
-   - Governing statute, located by LPRA title/section or by popular name — search LexJuris (https://www.lexjuris.com) or the Departamento de Estado's registry for the current, in-force text.
-   - Applicable procedural rule (Reglas de Procedimiento Civil, Reglas de Evidencia, or an agency's own procedural regulation).
-   - On-point Tribunal Supremo jurisprudence interpreting the statute/rule.
-   - Tribunal de Apelaciones decisions — note these are persuasive, not binding, and many are unpublished.
-   - Agency regulations and adjudications if the matter is administrative.
-   - Federal authority only if federal law governs or as persuasive analogy where PR law is silent — say explicitly when you're reasoning by analogy rather than citing controlling PR authority.
-3. **Track source status** for every authority found: confirmed current / needs verification / could not locate. Never present something as settled law without saying which bucket it's in.
-4. **Check for recent recodification.** Several core PR codes were recently replaced (Código Civil in 2020 via Ley 55-2020; LPAU in 2017 via Ley 38-2017). If the issue touches one of these areas, explicitly confirm whether the source predates or postdates the recodification.
-5. **Draft the research memo** per the output contract below.
+## Principio rector: investigar es una función profesional
 
-## Output contract
+Tratar la investigación como parte de la competencia profesional. Bajo las Reglas de Conducta Profesional vigentes, la preparación adecuada comprende investigar y analizar los hechos y el Derecho, y la competencia tecnológica exige usar responsablemente herramientas digitales, incluidas plataformas de investigación y aplicaciones de IA. Nunca delegar a una herramienta la determinación final de qué es Derecho vigente.
+
+## Las siete piezas operativas
+
+Usar como mapa flexible, no como secuencia rígida:
+
+1. **Definir el problema.** Convertir la consulta en preguntas jurídicas precisas; identificar partes, hechos materiales, foro, fecha relevante y remedio.
+2. **Determinar dónde comenzar.** Si el área es desconocida, comenzar con una fuente secundaria fiable para adquirir vocabulario y referencias, pero migrar rápidamente a fuentes primarias. Si se trata de actualizar conocimiento existente, comenzar por vigencia y cambios recientes.
+3. **Determinar qué fuentes hacen falta.** Constitución, estatuto, regla, reglamento, jurisprudencia, orden administrativa o autoridad federal según la cuestión.
+4. **Localizar la fuente primaria y el estado del Derecho.** Obtener el texto actual y las decisiones controlantes; no descansar en resúmenes cuando el original esté disponible.
+5. **Saber cuándo detenerse.** No confundir volumen con exhaustividad. Detener cuando las cuestiones materiales estén cubiertas por autoridad suficiente y actual, se hayan investigado autoridades adversas razonablemente localizables y las búsquedas adicionales produzcan rendimientos decrecientes. Explicar cualquier vacío.
+6. **Sintetizar y redactar.** Construir regla, excepciones, estándares, autoridad favorable/adversa y aplicación; no producir un collage de citas.
+7. **Auditar ética y tecnología.** Verificar citas, vigencia, confidencialidad, exactitud del resultado automatizado y que el producto refleje investigación real.
+
+## Jerarquía y ruta de fuentes
+
+Priorizar conforme a `pr/CLAUDE.md`:
+
+1. texto constitucional aplicable;
+2. estatuto vigente o ley especial;
+3. regla procesal o de evidencia aplicable;
+4. jurisprudencia del Tribunal Supremo de Puerto Rico;
+5. reglamentos y decisiones administrativas cuando corresponda;
+6. Tribunal de Apelaciones como autoridad persuasiva según proceda;
+7. autoridad federal cuando controle una cuestión federal o se use expresamente como analogía;
+8. fuentes secundarias para orientación, nunca como sustituto silencioso de una primaria disponible.
+
+## Workflow de verificación
+
+Para cada autoridad:
+
+- localizar el texto original o fuente primaria fiable;
+- verificar cita, fecha, tribunal u organismo y versión;
+- comprobar enmiendas, derogación, recodificación o sustitución;
+- comprobar tratamiento posterior material cuando se trate de jurisprudencia;
+- confirmar que la autoridad sostiene la proposición completa para la cual se cita;
+- distinguir holding, dictum, estándar, excepción y hechos;
+- identificar autoridad contraria material;
+- conservar enlace, pincite o referencia suficiente para reproducir la investigación.
+
+No presentar como Derecho vigente una cita encontrada únicamente en un artículo, blog, resultado de buscador o respuesta de IA.
+
+## IA y herramientas tecnológicas
+
+La IA puede ayudar a formular consultas, generar términos de búsqueda, organizar resultados, detectar cuestiones y resumir documentos. Todo resultado sustantivo debe cotejarse con la fuente jurídica. Nunca inventar una cita, pincite, cita textual, historial procesal, tratamiento posterior o contenido de una autoridad que no esté disponible.
+
+Etiquetar incertidumbre como `[VERIFICAR]`. Si una fuente no pudo localizarse, decirlo expresamente.
+
+## Control de recodificación y cambios
+
+Verificar especialmente áreas sometidas a cambios recientes, incluidos el Código Civil de 2020, la LPAU, reglas procesales, reglamentos y las Reglas de Conducta Profesional vigentes desde 2026. Identificar qué versión gobernaba en la fecha material cuando el cambio temporal importe.
+
+## Contrato de salida
 
 ```markdown
 # Memo de Investigación — [tema]
@@ -45,21 +86,36 @@ language: es
 [Pregunta jurídica precisa]
 
 ## Respuesta breve
-[1–3 oraciones, con nivel de certeza indicado]
+[Conclusión provisional y nivel de certeza]
+
+## Mapa de cuestiones
+1. [cuestión]
+2. [cuestión]
 
 ## Autoridad aplicable
-| Fuente | Cita | Estado |
-|---|---|---|
-| [estatuto/regla/caso] | [cita formateada] | Confirmado vigente / Requiere verificación / No localizado |
+| Fuente | Cita / enlace | Proposición | Estado |
+|---|---|---|---|
+| [primaria] | [cita] | [qué sostiene] | Vigente / verificar / no localizada |
+
+## Autoridad adversa o limitante
+[casos, excepciones, conflictos]
 
 ## Análisis
-[Aplicación de la autoridad a los hechos, con cita a cada proposición]
+[regla + aplicación + límites]
 
-## Advertencias
-- [Cualquier vacío, autoridad contradictoria, o área donde la ley cambió recientemente]
+## Vacíos y asuntos pendientes
+[hechos, fuentes o tratamiento por verificar]
 
-## Próximos pasos recomendados
-[P. ej.: verificar en LexJuris/Microjuris, confirmar con la secretaría del tribunal, consultar al supervisor]
+## Registro de investigación
+[consultas principales, fuentes examinadas y fecha de verificación]
+
+## Próximos pasos
+[qué falta antes de confiar profesionalmente en la conclusión]
 ```
 
-Always close with the mandatory disclaimer from `pr/CLAUDE.md`.
+## Fuentes metodológicas del diseño
+
+- Microjuris Puerto Rico, *La investigación jurídica bajo las nuevas Reglas de Conducta Profesional* (competencia, investigación, tecnología e IA como responsabilidades profesionales).
+- Microjuris Puerto Rico, *7 piezas para facilitar la investigación legal* (definir problema, punto de partida, selección de fuentes, primarias, criterio de cierre, redacción y dimensión ética).
+
+Cumplir con `pr/CLAUDE.md` y cerrar con su descargo obligatorio.
